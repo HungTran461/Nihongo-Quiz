@@ -494,8 +494,11 @@ function playJapanese(romaji) {
 function showAlphabet() {
   const container = document.getElementById("quiz-container");
 
-  // Gom dữ liệu theo romaji (giữ thứ tự ngẫu nhiên hay cố định tuỳ bạn)
-  const romajiSet = [...new Set(quizData.map(q => q.romaji))];
+  // Chỉ lấy dữ liệu có type là hiragana hoặc katakana
+  const filteredData = quizData.filter(q => q.type === "hiragana" || q.type === "katakana");
+
+  // Gom dữ liệu theo romaji
+  const romajiSet = [...new Set(filteredData.map(q => q.romaji))];
 
   // Tạo các hàng: mỗi hàng có 1 nút Nghe (dùng romaji để lookup kana trong playJapanese)
   let rows = romajiSet.map(r => {
