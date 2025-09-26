@@ -1,0 +1,594 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f0f0, #f8fbff);
+    overflow-x: hidden;
+    position: relative;
+    cursor: url("https://cdn.custom-cursor.com/db/cursor/32/cute_sushi_cursor.png") , auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Đảm bảo luôn full màn hình */
+}
+
+.background-shapes {
+  position: fixed; /* cố định nền */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0; /* để ở dưới */
+}
+
+/* Shape */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: auto;
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/cute_sushi_pointer.png") , auto;
+}
+
+.shape.explode {
+  animation: explode 0.6s forwards;
+}
+
+/* Các khối cụ thể */
+.shape1 {
+  width: 180px; height: 180px;
+  background: #6ec1e4; /* xanh nhạt */
+  top: 10%; left: 15%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 250px; height: 250px;
+  background: #f5a6b8; /* hồng nhạt */
+  top: 60%; left: 70%;
+  animation-delay: 4s;
+}
+
+.shape3 {
+  width: 120px; height: 120px;
+  background: #9be7c4; /* xanh lá nhạt */
+  top: 40%; left: 30%;
+  animation-delay: 8s;
+}
+
+.shape4 {
+  width: 60px; height: 60px;
+  background: hsl(46, 100%, 54%); /* xanh lá nhạt */
+  top: 70%; left: 30%;
+  animation-delay: 8s;
+}
+
+.shape5 {
+  width: 280px; height: 280px;
+  background: #5fff74; /* xanh lá nhạt */
+  top: 10%; left: 60%;
+  animation-delay: 8s;
+}
+
+.shape6 {
+  width: 80px; height: 80px;
+  background: #fcff3c; /* xanh lá nhạt */
+  top: 40%; left: 90%;
+  animation-delay: 8s;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.quiz-wrapper {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 420px;
+  max-width: 95%;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #1565c0;
+}
+
+.char {
+  font-size: 80px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.option-btn {
+  background: #f1f1f1;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  background: #64b5f6;
+  color: white;
+}
+
+#timer-bar {
+  height: 10px;
+  background: #bbdefb;
+  border-radius: 5px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+#timer-fill {
+  height: 100%;
+  width: 100%;
+  background: #1565c0;
+  transition: width 1s linear;
+}
+
+button.start-btn, button.end-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/cute_sushi_pointer.png") , auto;
+  transition: 0.2s;
+}
+
+button.start-btn:hover, button.end-btn:hover {
+  background: #0d47a1;
+}
+
+/* Hiệu ứng fade */
+/* .fade-in {
+  animation: fadeIn 0.6s ease-in;
+} */
+
+/* .fade-in {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: slideUp 0.6s ease-out forwards;
+} */
+
+/* .fade-in {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8) rotate(-5deg);
+  animation: fancyEntrance 1s ease-out forwards;
+} */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: floatFade 1.5s ease-out forwards;
+}
+
+/* Keyframes mới */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  40% {
+    opacity: 0.6;
+    transform: translateY(-10px) scale(1.02);
+  }
+  70% {
+    opacity: 0.85;
+    transform: translateY(5px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fancyEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8) rotate(-5deg);
+  }
+  40% {
+    opacity: 0.6;
+    transform: translateY(-20px) scale(1.05) rotate(2deg);
+  }
+  70% {
+    opacity: 0.9;
+    transform: translateY(10px) scale(0.95) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes floatBG {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, -40px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes floatShape {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-120px, -70px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes explode {
+  0%   { transform: scale(1); opacity: 0.8; }
+  40%  { transform: scale(2); opacity: 0.5; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+/* Khi nổ thì override animation floatShape */
+.shape.exploding {
+  animation: explode 0.6s forwards !important;
+  z-index: 10;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#modal-close {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#modal-close:hover {
+  background: #0d47a1;
+}
+
+/* Bảng kết quả */
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.result-table th {
+  background: #1565c0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.result-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.result-table tr:nth-child(even) {
+  background: #f1f8ff;
+}
+
+.result-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.result-correct {
+  color: green;
+  font-weight: bold;
+}
+
+.result-wrong {
+  color: red;
+  font-weight: bold;
+}
+
+.result-missed {
+  color: #ff9800;
+  font-style: italic;
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.result-buttons .start-btn {
+  background: #2e7d32;
+}
+.result-buttons .start-btn:hover {
+  background: #1b5e20;
+}
+
+.result-buttons .end-btn {
+  background: #c62828;
+}
+.result-buttons .end-btn:hover {
+  background: #8e0000;
+}
+
+.alphabet-table {
+  width: 90%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.alphabet-table th, .alphabet-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.alphabet-table th {
+  background: #4CAF50;
+  color: white;
+}
+
+.alphabet-table .char {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Nhóm nút chọn độ khó */
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+
+
+
+/* Nút chọn thể loại quiz */
+.type-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 16px 0;
+}
+
+.type-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #90caf9;
+  color: #fff;
+  transition: transform .15s, background .15s;
+}
+
+.type-btn.all{
+  background: #90caf9;
+  transform: scale(1.03);
+}
+
+.type-btn.hiragana{
+  background: #90caf9;
+  transform: scale(1.03);
+}
+
+.type-btn.katakana{
+  background: #90caf9;
+  transform: scale(1.03);
+}
+
+.type-btn.goaisatsu{
+  background: #90caf9;
+  transform: scale(1.03);
+}
+
+.type-btn.all.active{
+  background: #1565c0;
+  box-shadow: 0 6px 14px rgb(28, 134, 255);
+  transform: scale(1.03);
+}
+
+.type-btn.hiragana.active{
+  background: #1565c0;
+  box-shadow: 0 6px 14px rgba(28, 134, 255);
+  transform: scale(1.03);
+}
+
+.type-btn.katakana.active{
+  background: #1565c0;
+  box-shadow: 0 6px 14px rgba(28, 134, 255);
+  transform: scale(1.03);
+}
+
+.type-btn.goaisatsu.active{
+  background: #1565c0;
+  box-shadow: 0 6px 14px rgba(28, 134, 255);
+  transform: scale(1.03);
+}
+
+/*Nút độ khó*/
+.difficulty-buttons .difficulty-btn {
+  flex: 1 1 100px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+  color: white;
+}
+
+/* Màu cho từng cấp độ */
+.difficulty-btn.easy {
+  background: #87ff8b; /* xanh lá */
+}
+.difficulty-btn.easy:hover {
+  background: #388e3c;
+}
+
+.difficulty-btn.medium {
+  background: #ffc46d; /* cam */
+}
+.difficulty-btn.medium:hover {
+  background: #e46623;
+}
+
+.difficulty-btn.hard {
+  background: #ff867d; /* đỏ */
+}
+.difficulty-btn.hard:hover {
+  background: #d82d2d;
+}
+
+/* Nút độ khó đang chọn */
+/* Nút chung */
+.difficulty-btn.active {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Active cho từng cấp */
+.difficulty-btn.easy.active {
+  background: #2e7d32; /* xanh lá đậm */
+  box-shadow: 0 0 12px rgba(46, 125, 50, 0.7);
+}
+
+.difficulty-btn.medium.active {
+  background: #ef6c00; /* cam đậm */
+  box-shadow: 0 0 12px rgba(239, 108, 0, 0.7);
+}
+
+.difficulty-btn.hard.active {
+  background: #c62828; /* đỏ đậm */
+  box-shadow: 0 0 12px rgba(198, 40, 40, 0.7);
+}
+
+.sound-btn {
+  position: relative;
+  overflow: hidden;            /* để ripple không tràn ra ngoài */
+  background-color: #e6f3ff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.sound-btn:hover {
+  background-color: #4a90e2;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.sound-btn:active {
+  transform: scale(0.95);
+  background-color: #357ABD;
+}
+
+/* hiệu ứng ripple */
+.sound-btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sound-btn:active::after {
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
