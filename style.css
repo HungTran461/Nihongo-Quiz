@@ -492,6 +492,34 @@ button.start-btn:hover, button.end-btn:hover {
   color: white;
 }
 
+/* Nút chọn thời gian & số câu */
+.time-buttons, .count-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.time-btn, .count-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffcc80;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.time-btn.active, .count-btn.active {
+  background: #fb8c00;
+  box-shadow: 0 0 10px rgba(251, 140, 0, 0.6);
+  transform: scale(1.05);
+}
+
+
 /* Màu cho từng cấp độ */
 .difficulty-btn.easy {
   background: #87ff8b; /* xanh lá */

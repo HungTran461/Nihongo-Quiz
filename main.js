@@ -146,6 +146,9 @@ let timeLeft = 15;
 let userAnswers = []; // Lưu lịch sử trả lời
 let difficulty = "easy";
 let currentType = "all"; // "all" | "hiragana" | "katakana"　｜"goaisatsu"
+let questionTime = 15;   // thời gian mặc định mỗi câu (giây)
+let questionCount = 15;  // số câu mặc định
+
 
 // Modal helpers
 function showModal(message) {
@@ -264,7 +267,7 @@ document.querySelectorAll('#type-buttons .type-btn').forEach(btn => {
 // Render câu hỏi
 function renderQuestion() {
   clearInterval(timer);
-  timeLeft = 15;
+  timeLeft = questionTime;
 
   const q = questions[currentQuestion];
   const container = document.getElementById("quiz-container");
@@ -291,7 +294,7 @@ function renderQuestion() {
 
   timer = setInterval(() => {
     timeLeft--;
-    timerFill.style.width = (timeLeft / 15) * 100 + "%";
+    timerFill.style.width = (timeLeft / questionTime) * 100 + "%";
 
     if (timeLeft <= 0) {
       clearInterval(timer);
@@ -392,6 +395,23 @@ function showStartScreen() {
   container.innerHTML = `
     <div class="fade-in">
       <h2>Chào mừng đến với Quiz Cơ Bản Tiếng Nhật</h2>
+      <p>Chọn thời gian mỗi câu:</p>
+      <div class="time-buttons">
+        <button class="time-btn t3" onclick="setTime(3)">3s</button>
+        <button class="time-btn t5" onclick="setTime(5)">5s</button>
+        <button class="time-btn t10 active" onclick="setTime(10)">10s</button>
+        <button class="time-btn t15" onclick="setTime(15)">15s</button>
+        <button class="time-btn t20" onclick="setTime(20)">20s</button>
+      </div>
+
+      <p>Chọn số câu hỏi:</p>
+      <div class="count-buttons">
+        <button class="count-btn c10" onclick="setCount(10)">10 câu</button>
+        <button class="count-btn c15 active" onclick="setCount(15)">15 câu</button>
+        <button class="count-btn c20" onclick="setCount(20)">20 câu</button>
+        <button class="count-btn c30" onclick="setCount(30)">30 câu</button>
+        <button class="count-btn c40" onclick="setCount(40)">40 câu</button>
+      </div>
       <p>Chọn thể loại:</p>
       <div id="type-buttons" class="type-buttons">
         <button class="type-btn all active" onclick="setType('all')">Kết hợp</button>
@@ -549,14 +569,45 @@ function startQuiz() {
   currentQuestion = 0;
   score = 0;
   userAnswers = [];
-  questions = generateQuestions(15);
+  questions = generateQuestions(questionCount);
   renderQuestion();
+}
+
+function setTime(seconds) {
+  questionTime = seconds;
+  showModal(`⏳ Thời gian mỗi câu: ${seconds} giây`);
+  document.querySelectorAll(".time-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`.time-btn.t${seconds}`).classList.add("active");
+}
+
+function setCount(num) {
+  questionCount = num;
+  showModal(`📋 Số câu hỏi: ${num}`);
+  document.querySelectorAll(".count-btn").forEach(btn => btn.classList.remove("active"));
+  document.querySelector(`.count-btn.c${num}`).classList.add("active");
 }
 
 
 // Giao diện ban đầu
 document.getElementById("quiz-container").innerHTML = `
   <h2>Chào mừng đến với Quiz Cơ Bản Tiếng Nhật</h2>
+  <p>Chọn thời gian mỗi câu:</p>
+  <div class="time-buttons">
+    <button class="time-btn t3" onclick="setTime(3)">3s</button>
+    <button class="time-btn t5" onclick="setTime(5)">5s</button>
+    <button class="time-btn t10 active" onclick="setTime(10)">10s</button>
+    <button class="time-btn t15" onclick="setTime(15)">15s</button>
+    <button class="time-btn t20" onclick="setTime(20)">20s</button>
+  </div>
+
+  <p>Chọn số câu hỏi:</p>
+  <div class="count-buttons">
+    <button class="count-btn c10" onclick="setCount(10)">10 câu</button>
+    <button class="count-btn c15 active" onclick="setCount(15)">15 câu</button>
+    <button class="count-btn c20" onclick="setCount(20)">20 câu</button>
+    <button class="count-btn c30" onclick="setCount(30)">30 câu</button>
+    <button class="count-btn c40" onclick="setCount(40)">40 câu</button>
+  </div>
   <p>Chọn thể loại:</p>
   <div id="type-buttons" class="type-buttons">
     <button class="type-btn all active" onclick="setType('all')">Kết hợp</button>
