@@ -203,24 +203,6 @@ const timeoutSound = new Audio("sound/timeout.mp3");
 tickSound.volume = 0.4;   // nhỏ để không gây khó chịu
 timeoutSound.volume = 0.4;
 
-function playBgMusic() {
-  const bgMusic = document.getElementById("bg-music");
-  if (bgMusic && bgMusic.paused) {
-    bgMusic.volume = 0.5;
-    bgMusic.play().catch(err => {
-      console.log("Không phát được nhạc:", err);
-    });
-  }
-}
-
-function stopBgMusic() {
-  const bgMusic = document.getElementById("bg-music");
-  if (bgMusic && !bgMusic.paused) {
-    bgMusic.pause();
-    bgMusic.currentTime = 0; // reset về đầu
-  }
-}
-
 
 // Modal helpers
 function showModal(message) {
@@ -439,7 +421,6 @@ function checkAnswer(selected) {
 function showResult() {
   clearInterval(timer);
   stopSounds();
-  playBgMusic();
   
   const container = document.getElementById("quiz-container");
 
@@ -535,7 +516,6 @@ function showStartScreen() {
   // Gán độ khó mặc định
   difficulty = "easy";
   currentType = 'all';
-  playBgMusic();
 }
 
 
@@ -620,7 +600,7 @@ function playJapanese(romaji) {
 // Hàm showAlphabet cập nhật: 4 cột (Hiragana, Katakana, Romaji, Nghe)
 function showAlphabet() {
   const container = document.getElementById("quiz-container");
-  stopBgMusic();
+
   // Chỉ lấy dữ liệu có type là hiragana hoặc katakana
   const filteredData = quizData.filter(q => q.type === "hiragana" || q.type === "katakana");
 
@@ -672,7 +652,7 @@ function showAlphabet() {
 
 function showGoaisatsu() {
   const container = document.getElementById("quiz-container");
-  stopBgMusic();
+
   // Lọc dữ liệu chỉ lấy goaisatsu
   const greetings = quizData.filter(q => q.type === "goaisatsu");
 
@@ -720,7 +700,6 @@ function startQuiz() {
   userAnswers = [];
   questions = generateQuestions(questionCount);
   renderQuestion();
-  stopBgMusic();
 }
 
 function setTime(seconds) {
