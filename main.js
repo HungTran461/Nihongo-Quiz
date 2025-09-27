@@ -173,7 +173,7 @@ const quizData = [
   { char: "おかねがありますか？", romaji: "Bạn có tiền không?", type: "goaisatsu" },
   { char: "てつだいましょうか", romaji: "Để tôi giúp bạn nhé!", type: "goaisatsu" },
   { char: "いいえ、けっこうです", romaji: "Thôi, được rồi!", type: "goaisatsu" },
-  { char: "だいしょううぶ", romaji: "Không sao!", type: "goaisatsu" },
+  { char: "だいしょうぶ", romaji: "Không sao!", type: "goaisatsu" },
   { char: "はじめまして", romaji: "Rất vui khi được gặp bạn", type: "goaisatsu" },
   { char: "わたしは [_] とまうします。", romaji: "Tôi tên là ...", type: "goaisatsu" },
   { char: "[_]さいです。", romaji: "Tôi ... tuổi", type: "goaisatsu" },
