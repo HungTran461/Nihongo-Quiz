@@ -195,6 +195,8 @@ let difficulty = "easy";
 let currentType = "all"; // "all" | "hiragana" | "katakana"　｜"goaisatsu"
 let questionTime = 15;   // thời gian mặc định mỗi câu (giây)
 let questionCount = 15;  // số câu mặc định
+let nextAction = null; // hành động tiếp theo sau khi đóng modal
+
 // Âm thanh
 const tickSound = new Audio("sound/tick.mp3");
 const timeoutSound = new Audio("sound/timeout.mp3");
@@ -210,6 +212,11 @@ function showModal(message) {
 }
 document.getElementById("modal-close").onclick = () => {
   document.getElementById("modal").style.display = "none";
+  if (typeof nextAction === "function") {
+    const action = nextAction;
+    nextAction = null;   // reset
+    action();            // chạy hành động tiếp theo
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -380,7 +387,6 @@ function stopSounds() {
 // Kiểm tra đáp án
 function checkAnswer(selected) {
   clearInterval(timer);
-
   const q = questions[currentQuestion];
   let isCorrect = selected === q.answer;
 
@@ -395,17 +401,19 @@ function checkAnswer(selected) {
   if (selected === q.answer) {
     score++;
     showModal("✅ Chính xác!");
+    stopSounds();
   } else if (selected === null) {
     showModal(`❌ Hết giờ! Đáp án đúng: ${q.answer}`);
   } else {
     showModal(`❌ Sai! Đáp án đúng: ${q.answer}`);
+    stopSounds();
   }
 
   currentQuestion++;
   if (currentQuestion < questions.length) {
-    setTimeout(renderQuestion, 2000);
+    nextAction = () => setTimeout(renderQuestion, 1000);
   } else {
-    setTimeout(showResult, 2000);
+    nextAction = () => setTimeout(showResult, 1000);
   }
 }
 
