@@ -112,21 +112,22 @@ const quizData = [
   { char: "こんばんは", romaji: "Chào buổi tối", type: "goaisatsu" },
   { char: "ありがとうごさいます", romaji: "Cảm ơn", type: "goaisatsu" },
   { char: "しつれいします", romaji: "Xin phép", type: "goaisatsu" },
+  { char: "おさきにしつれいします", romaji: "Xin phép về trước", type: "goaisatsu" },
   { char: "おつかれさっまです", romaji: "Bạn vất vả rồi", type: "goaisatsu" },
   { char: "おやすみなさい", romaji: "Chúc ngủ ngon", type: "goaisatsu" },
   { char: "さようなら", romaji: "Tạm biệt", type: "goaisatsu" },
   { char: "いただきます", romaji: "Chúc ngon miệng", type: "goaisatsu" },
   { char: "ごちそうさまですた", romaji: "Cảm ơn vì bữa ăn", type: "goaisatsu" },
-  { char: "いつてきます", romaji: "Tôi đi nhé!", type: "goaisatsu" },
-  { char: "いつてらつしやい", romaji: "Bạn đi nhé!", type: "goaisatsu" },
+  { char: "いってきます", romaji: "Tôi đi nhé!", type: "goaisatsu" },
+  { char: "いってらっしゃい", romaji: "Bạn đi nhé!", type: "goaisatsu" },
   { char: "ただいま", romaji: "Tôi đã về rồi!", type: "goaisatsu" },
   { char: "おかえりなさい", romaji: "Bạn đã về rồi à!", type: "goaisatsu" },
-  { char: "もうしわけございません", romaji: "Thành thật xin lỗi", type: "goaisatsu" },
-  { char: "はじめましよう", romaji: "Bắt đầu thôi nào!", type: "goaisatsu" },
-  { char: "やすみましよう", romaji: "Nghỉ ngơi thôi nào!", type: "goaisatsu" },
-  { char: "おわりましよう", romaji: " Xong rồi!", type: "goaisatsu" },
-  { char: "たつてください", romaji: "Hãy đứng lên!", type: "goaisatsu" },
-  { char: "すわつてください", romaji: "Hãy ngồi xuống!", type: "goaisatsu" },
+  { char: "もうわけございません", romaji: "Thành thật xin lỗi", type: "goaisatsu" },
+  { char: "はじめましょう", romaji: "Bắt đầu thôi nào!", type: "goaisatsu" },
+  { char: "やすみましょう", romaji: "Nghỉ ngơi thôi nào!", type: "goaisatsu" },
+  { char: "おわりましょう", romaji: " Xong rồi!", type: "goaisatsu" },
+  { char: "たってください", romaji: "Hãy đứng lên!", type: "goaisatsu" },
+  { char: "すわってください", romaji: "Hãy ngồi xuống!", type: "goaisatsu" },
   { char: "みてください", romaji: "Xem nè!", type: "goaisatsu" },
   { char: "よんでください", romaji: "Hãy đọc nó!", type: "goaisatsu" },
   { char: "ただしい", romaji: "Đúng rồi!", type: "goaisatsu" },
@@ -134,7 +135,53 @@ const quizData = [
   { char: "どういたしまして", romaji: "Không có gì!", type: "goaisatsu" },
   { char: "もしもし", romaji: "Alo", type: "goaisatsu" },
   { char: "すきだ", romaji: "Tôi thích bạn!", type: "goaisatsu" },
-  { char: "なにかしつもんがありますか？", romaji: "Bạn có câu hỏi nào không?", type: "goaisatsu" }
+  { char: "なにかしつもんがありますか？", romaji: "Bạn có câu hỏi nào không?", type: "goaisatsu" },
+  { char: "じかんがありますか？", romaji: "Bạn có rảnh không?", type: "goaisatsu" },
+  { char: "あそびにいきませんか？,", romaji: "Đi chơi không?", type: "goaisatsu" },
+  { char: "みませんか？", romaji: "Xem không?", type: "goaisatsu" },
+  { char: "みましょう", romaji: "Xem thôi nào!", type: "goaisatsu" },
+  { char: "きょうわなにをたべますか？", romaji: "Hôm nay ăn gì?", type: "goaisatsu" },
+  { char: "たべてください", romaji: "Hãy ăn đi!", type: "goaisatsu" },
+  { char: "なにをしていますか？", romaji: "Đang làm gì vậy?", type: "goaisatsu" },
+  { char: "いつかえりますか？", romaji: "Khi nào về?", type: "goaisatsu" },
+  { char: "またあいましょう", romaji: "Hẹn gặp lại!", type: "goaisatsu" },
+  { char: "しゃまたね", romaji: "Gặp lại sau nhé!", type: "goaisatsu" },
+  { char: "おからだにきおつけて！", romaji: "Nhớ giữ gìn sức khỏe nhé!", type: "goaisatsu" },
+  { char: "どうぞおげんきで！", romaji: "Chúc sức khỏe nhé!", type: "goaisatsu" },
+  { char: "わかりますか？", romaji: "Bạn có hiểu không?", type: "goaisatsu" },
+  { char: "はい。わかります。", romaji: "Vâng. Tôi hiểu.", type: "goaisatsu" },
+  { char: "いいえ。わかりません。", romaji: "Không. Tôi không hiểu.", type: "goaisatsu" },
+  { char: "わかりましたか？", romaji: "Bạn đã hiểu chưa?", type: "goaisatsu" },
+  { char: "すみません。まだわかりません。", romaji: "Xin lỗi. Tôi vẫn chưa hiểu.", type: "goaisatsu" },
+  { char: "いまなんじですか？", romaji: "Bây giờ là mấy giờ?", type: "goaisatsu" },
+  { char: "おたんしょうびおめでとう！", romaji: "Chúc mừng sinh nhật!", type: "goaisatsu" },
+  { char: "どうぞ", romaji: "Xin mời!", type: "goaisatsu" },
+  { char: "もういちどおねがいします", romaji: "Làm ơn hãy ... 1 lần nữa!", type: "goaisatsu" },
+  { char: "はい。なんですか？", romaji: "Vâng. Gì vậy ạ?", type: "goaisatsu" },
+  { char: "おめでとうごさいます", romaji: "Xin chúc mừng!", type: "goaisatsu" },
+  { char: "おいしいですね", romaji: "Ngon quá!", type: "goaisatsu" },
+  { char: "すごいですね", romaji: "Hay quá!", type: "goaisatsu" },
+  { char: "たいへんですね", romaji: "Vất vả quá!", type: "goaisatsu" },
+  { char: "さんえんですね", romaji: "Tiếc quá!", type: "goaisatsu" },
+  { char: "さびしいですね", romaji: "Buồn quá!", type: "goaisatsu" },
+  { char: "ねむいですね", romaji: "Buồn ngủ quá!", type: "goaisatsu" },
+  { char: "くさいですね", romaji: "Hôi quá!", type: "goaisatsu" },
+  { char: "いたいよ", romaji: "Đau quá!", type: "goaisatsu" },
+  { char: "いや", romaji: "Không thích!", type: "goaisatsu" },
+  { char: "いこう", romaji: "Đi thôi nào!", type: "goaisatsu" },
+  { char: "かえろう", romaji: "Về thôi nào!", type: "goaisatsu" },
+  { char: "おかねがありますか？", romaji: "Bạn có tiền không?", type: "goaisatsu" },
+  { char: "てつだいましょうか", romaji: "Để tôi giúp bạn nhé!", type: "goaisatsu" },
+  { char: "いいえ、けっこうです", romaji: "Thôi, được rồi!", type: "goaisatsu" },
+  { char: "だいしょううぶ", romaji: "Không sao!", type: "goaisatsu" },
+  { char: "はじめまして", romaji: "Rất vui khi được gặp bạn", type: "goaisatsu" },
+  { char: "わたしは [_] とまうします。", romaji: "Tôi tên là ...", type: "goaisatsu" },
+  { char: "[_]さいです。", romaji: "Tôi ... tuổi", type: "goaisatsu" },
+  { char: "[_]からきました。", romaji: "Tôi đến từ ...", type: "goaisatsu" },
+  { char: "[_]にすんでいます。", romaji: "Tôi đang sống ở ...", type: "goaisatsu" },
+  { char: "KAIZENがっこうのがくせいます。", romaji: "Tôi là học viên của trường KAIZEN", type: "goaisatsu" },
+  { char: "どうぞよろしくおねがいします。", romaji: "Rất vui được biết bạn và từ nay xin được giúp đỡ", type: "goaisatsu" },
+  { char: "がんばってください", romaji: "Cố gắng hết sức nhé!", type: "goaisatsu" }
 ];
 
 
@@ -148,6 +195,12 @@ let difficulty = "easy";
 let currentType = "all"; // "all" | "hiragana" | "katakana"　｜"goaisatsu"
 let questionTime = 15;   // thời gian mặc định mỗi câu (giây)
 let questionCount = 15;  // số câu mặc định
+// Âm thanh
+const tickSound = new Audio("sound/tick.mp3");
+const timeoutSound = new Audio("sound/timeout.mp3");
+tickSound.volume = 0.4;   // nhỏ để không gây khó chịu
+timeoutSound.volume = 0.4;
+
 
 
 // Modal helpers
@@ -293,16 +346,36 @@ function renderQuestion() {
   const timerFill = document.getElementById("timer-fill");
 
   timer = setInterval(() => {
-    timeLeft--;
-    timerFill.style.width = (timeLeft / questionTime) * 100 + "%";
+  timeLeft--;
+  timerFill.style.width = (timeLeft / questionTime) * 100 + "%";
 
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      showModal("⏰ Hết giờ!");
-      checkAnswer(null);
-    }
+  if (timeLeft > 0) {
+    // Phát âm tick
+    tickSound.currentTime = 0; 
+    tickSound.play();
+  }
+
+
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    tickSound.pause();
+    tickSound.currentTime = 0;
+    // Phát âm hết giờ
+    timeoutSound.currentTime = 0;
+    timeoutSound.play();
+    showModal("⏰ Hết giờ!");
+    checkAnswer(null);
+  }
   }, 1000);
 }
+
+function stopSounds() {
+  tickSound.pause();
+  timeoutSound.pause();
+  tickSound.currentTime = 0;
+  timeoutSound.currentTime = 0;
+}
+
 
 // Kiểm tra đáp án
 function checkAnswer(selected) {
@@ -330,9 +403,9 @@ function checkAnswer(selected) {
 
   currentQuestion++;
   if (currentQuestion < questions.length) {
-    setTimeout(renderQuestion, 1000);
+    setTimeout(renderQuestion, 2000);
   } else {
-    setTimeout(showResult, 1000);
+    setTimeout(showResult, 2000);
   }
 }
 
@@ -340,6 +413,8 @@ function checkAnswer(selected) {
 // Kết quả
 function showResult() {
   clearInterval(timer);
+  stopSounds();
+  
   const container = document.getElementById("quiz-container");
 
   let resultTable = `
@@ -417,7 +492,7 @@ function showStartScreen() {
         <button class="type-btn all active" onclick="setType('all')">Kết hợp</button>
         <button class="type-btn hiragana" onclick="setType('hiragana')">Hiragana</button>
         <button class="type-btn katakana" onclick="setType('katakana')">Katakana</button>
-        <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu chào hỏi</button>
+        <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu cơ bản</button>
       </div>
       <p>Chọn độ khó:</p>
       <div class="difficulty-buttons">
@@ -427,6 +502,7 @@ function showStartScreen() {
       </div>
       <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showAlphabet()">Xem bảng chữ cái</button>
+      <button class="end-btn" onclick="showGoaisatsu()">Xem câu cơ bản</button>
     </div>
   `;
 
@@ -455,7 +531,7 @@ function setDifficulty(level) {
 
 function setType(level) {
   currentType = level;
-  showModal(`🔧 Bạn đã chọn thể loại: ${level === "all" ? "Tất cả" : level === "hiragana" ? "Hiragana" : level === "katakana" ? "Katakana" : "Câu chào hỏi"}`);
+  showModal(`🔧 Bạn đã chọn thể loại: ${level === "all" ? "Tất cả" : level === "hiragana" ? "Hiragana" : level === "katakana" ? "Katakana" : "Câu cơ bản"}`);
   // Xóa class active ở tất cả nút
   document.querySelectorAll(".type-btn").forEach(btn => {
     btn.classList.remove("active");
@@ -470,45 +546,49 @@ function setType(level) {
 
 // Hàm phát âm: nhận romaji, tìm hiragana ưu tiên, fallback katakana, fallback romaji
 function playJapanese(romaji) {
-  // tìm trong quizData (biến quizData đã có trong file)
   const hiraObj = quizData.find(q => q.romaji === romaji && q.type === "hiragana");
   const kataObj = quizData.find(q => q.romaji === romaji && q.type === "katakana");
+  const goaiObj = quizData.find(q => q.romaji === romaji && q.type === "goaisatsu");
 
-  // ưu tiên đọc hiragana; nếu không có thì katakana; nếu cũng không có thì đọc romaji (cuối cùng)
-  const textToSpeak = hiraObj ? hiraObj.char : (kataObj ? kataObj.char : romaji);
+  // Ưu tiên: Hiragana > Katakana > Goaisatsu > Romaji
+  const textToSpeak = hiraObj ? hiraObj.char 
+                      : kataObj ? kataObj.char 
+                      : goaiObj ? goaiObj.char 
+                      : romaji;
 
-  // đảm bảo huỷ speech cũ (không bị chồng)
   if ('speechSynthesis' in window) {
     speechSynthesis.cancel();
 
     const speakNow = () => {
-      const utterance = new SpeechSynthesisUtterance(textToSpeak + "。"); // thêm dấu chấm để tạo pause
-      utterance.lang = "ja-JP";
-      utterance.rate = 0.6; // chậm, dễ nghe (bạn có thể chỉnh 0.6 - 0.9)
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.lang = "ja-JP";   // ép buộc tiếng Nhật
+      utterance.rate = 0.8;       // tốc độ đọc chậm, dễ nghe
       utterance.pitch = 1.0;
 
-      // chọn giọng tiếng Nhật nếu có
+      // Tìm giọng Nhật trong danh sách
       const voices = speechSynthesis.getVoices();
-      const jaVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith("ja"));
-      if (jaVoice) utterance.voice = jaVoice;
+      const jaVoice = voices.find(v => v.lang && v.lang.toLowerCase().includes("ja"));
+      if (jaVoice) {
+        utterance.voice = jaVoice;
+      }
 
       speechSynthesis.speak(utterance);
     };
 
-    // voices đôi khi chưa load ngay — lắng nghe onvoiceschanged nếu cần
+    // Nếu voices chưa load -> đợi event
     if (speechSynthesis.getVoices().length === 0) {
       speechSynthesis.onvoiceschanged = () => {
         speakNow();
-        // tránh gọi nhiều lần nếu event lặp: reset handler
         speechSynthesis.onvoiceschanged = null;
       };
     } else {
       speakNow();
     }
   } else {
-    alert("Trình duyệt của bạn không hỗ trợ Speech Synthesis.");
+    alert("Trình duyệt của bạn không hỗ trợ đọc tiếng Nhật.");
   }
 }
+
 
 // Hàm showAlphabet cập nhật: 4 cột (Hiragana, Katakana, Romaji, Nghe)
 function showAlphabet() {
@@ -549,6 +629,48 @@ function showAlphabet() {
             <th>Hiragana</th>
             <th>Katakana</th>
             <th>Phiên âm</th>
+            <th>Nghe</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+      <br/>
+      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="end-btn" onclick="showStartScreen()">Quay lại màn hình chính</button>
+    </div>
+  `;
+}
+
+function showGoaisatsu() {
+  const container = document.getElementById("quiz-container");
+
+  // Lọc dữ liệu chỉ lấy goaisatsu
+  const greetings = quizData.filter(q => q.type === "goaisatsu");
+
+  // Tạo bảng hiển thị
+  let rows = greetings.map(g => {
+    const safeText = String(g.romaji).replace(/'/g, "\\'");
+    return `
+      <tr>
+        <td class="char">${g.char}</td>
+        <td>${g.romaji}</td>
+        <td style="text-align:center;">
+          <button class="sound-btn" onclick="playJapanese('${safeText}')">🔊</button>
+        </td>
+      </tr>
+    `;
+  }).join("");
+
+  container.innerHTML = `
+    <div class="fade-in">
+      <h2>👋 Các câu chào hỏi (ごあいさつ)</h2>
+      <table class="alphabet-table">
+        <thead>
+          <tr>
+            <th>Tiếng Nhật</th>
+            <th>Nghĩa</th>
             <th>Nghe</th>
           </tr>
         </thead>
@@ -613,7 +735,7 @@ document.getElementById("quiz-container").innerHTML = `
     <button class="type-btn all active" onclick="setType('all')">Kết hợp</button>
     <button class="type-btn hiragana" onclick="setType('hiragana')">Hiragana</button>
     <button class="type-btn katakana" onclick="setType('katakana')">Katakana</button>
-    <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu chào hỏi</button>
+    <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu cơ bản</button>
   </div>
   <p>Chọn độ khó:</p>
   <div class="difficulty-buttons">
@@ -623,4 +745,5 @@ document.getElementById("quiz-container").innerHTML = `
       </div>
   <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
   <button class="end-btn" onclick="showAlphabet()">Xem bảng chữ cái</button>
+  <button class="end-btn" onclick="showGoaisatsu()">Xem câu cơ bản</button>
 `
