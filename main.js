@@ -439,6 +439,7 @@ function checkAnswer(selected) {
 function showResult() {
   clearInterval(timer);
   stopSounds();
+  playBgMusic();
   
   const container = document.getElementById("quiz-container");
 
