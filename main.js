@@ -489,7 +489,6 @@ function showResult() {
   `;
 
   container.innerHTML = resultTable;
-  stopBgMusic();
 }
 
 function showStartScreen() {
