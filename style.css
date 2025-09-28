@@ -620,3 +620,13 @@ button.start-btn:hover, button.end-btn:hover {
   }
 }
 
+.type-btn.goi {
+  background: #90caf9;
+  transform: scale(1.03);
+}
+
+.type-btn.goi.active {
+  background: #1565c0;
+  box-shadow: 0 6px 14px rgba(28, 134, 255);
+  transform: scale(1.03);
+}

@@ -181,7 +181,34 @@ const quizData = [
   { char: "[_]にすんでいます。", romaji: "Tôi đang sống ở ...", type: "goaisatsu" },
   { char: "KAIZENがっこうのがくせいます。", romaji: "Tôi là học viên của trường KAIZEN", type: "goaisatsu" },
   { char: "どうぞよろしくおねがいします。", romaji: "Rất vui được biết bạn và từ nay xin được giúp đỡ", type: "goaisatsu" },
-  { char: "がんばってください", romaji: "Cố gắng hết sức nhé!", type: "goaisatsu" }
+  { char: "がんばってください", romaji: "Cố gắng hết sức nhé!", type: "goaisatsu" },
+  // ========================
+  // Goi (語彙 - ごい) - cho romaji là nghĩa luôn đỡ phải sửa code nhiều
+  // ========================
+  { char: "あし", romaji: "Chân", type: "goi" ,highlights:[{text : "し",color :"red"}]},
+  { char: "えき", romaji: "Nhà ga", type: "goi" ,highlights:[{text : "え",color :"red"}]},
+  { char: "かい", romaji: "Vỏ sò", type: "goi" ,highlights:[{text : "か",color :"red"}]},
+  { char: "しお", romaji: "Muối", type: "goi" ,highlights:[{text : "お",color :"red"}]},
+  { char: "うし", romaji: "Bò/Trâu", type: "goi" ,highlights:[{text : "し",color :"red"}]},
+  { char: "かさ", romaji: "Cây dù", type: "goi" ,highlights:[{text : "か",color :"red"}]},
+  { char: "くし", romaji: "Cây lược", type: "goi" ,highlights:[{text : "し",color :"red"}]},
+  { char: "すいか", romaji: "Dưa hấu", type: "goi" ,highlights:[{text : "いか",color :"red"}]},
+  { char: "いけ", romaji: "Ao,hồ", type: "goi" ,highlights:[{text : "け",color :"red"}]},
+  { char: "あせ", romaji: "Mồ hôi", type: "goi" ,highlights:[{text : "あ",color :"red"}]},
+  { char: "ここ", romaji: "Chỗ này/Ở đây", type: "goi" ,highlights:[{text : "こ",color :"red", nth: 2}]},  //nth = 1 là ký tự đầu tương tự với 2,3,4... ; -1 là chữ cuối cùng
+  { char: "そこ", romaji: "Chỗ đó", type: "goi" ,highlights:[{text : "こ",color :"red"}]},
+  { char: "いす", romaji: "Cái ghế", type: "goi" ,highlights:[{text : "す",color :"red"}]},
+  { char: "かき", romaji: "Quả hồng", type: "goi" ,highlights:[{text : "き",color :"red"}]},
+  { char: "あかい", romaji: "Đỏ", type: "goi",highlights:[{text : "か",color :"red"}]},
+  { char: "あおい", romaji: "Xanh lá/Xanh lam", type: "goi",highlights:[{text : "お",color :"red"}]},
+  { char: "しかく", romaji: "Hình vuông/Tư cách/Chứng chỉ", type: "goi",highlights:[{text : "し",color :"red"}]},
+  { char: "せかい", romaji: "Thế giới (khác)", type: "goi",highlights:[{text : "せ",color :"red"}]},
+  { char: "きそく", romaji: "Quy định", type: "goi",highlights:[{text : "き",color :"red"}]},
+  { char: "あき", romaji: "Mùa thu", type: "goi",highlights:[{text : "あ",color :"red"}]},
+  { char: "あう", romaji: "Gặp gỡ", type: "goi",highlights:[{text : "あ",color :"red"}]},
+  { char: "さか", romaji: "Con dốc", type: "goi",highlights:[{text : "か",color :"red"}]},
+  { char: "さけ", romaji: "Rượu Sake", type: "goi",highlights:[{text : "け",color :"red"}]},
+  { char: "うそ", romaji: "Lời nói dối", type: "goi",highlights:[{text : "う",color :"red"}]},
 ];
 
 
@@ -500,6 +527,7 @@ function showStartScreen() {
         <button class="type-btn hiragana" onclick="setType('hiragana')">Hiragana</button>
         <button class="type-btn katakana" onclick="setType('katakana')">Katakana</button>
         <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu cơ bản</button>
+        <button class="type-btn goi" onclick="setType('goi')">Từ vựng</button>
       </div>
       <p>Chọn độ khó:</p>
       <div class="difficulty-buttons">
@@ -510,6 +538,7 @@ function showStartScreen() {
       <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showAlphabet()">Xem bảng chữ cái</button>
       <button class="end-btn" onclick="showGoaisatsu()">Xem câu cơ bản</button>
+      <button class="end-btn" onclick="showGoi()">Xem từ vựng</button>
     </div>
   `;
 
@@ -538,51 +567,66 @@ function setDifficulty(level) {
 
 function setType(level) {
   currentType = level;
-  showModal(`🔧 Bạn đã chọn thể loại: ${level === "all" ? "Tất cả" : level === "hiragana" ? "Hiragana" : level === "katakana" ? "Katakana" : "Câu cơ bản"}`);
-  // Xóa class active ở tất cả nút
+  showModal(`🔧 Bạn đã chọn thể loại: ${
+    level === "all" ? "Tất cả" :
+    level === "hiragana" ? "Hiragana" :
+    level === "katakana" ? "Katakana" :
+    level === "goaisatsu" ? "Câu cơ bản" :
+    "Từ vựng"
+  }`);
+
   document.querySelectorAll(".type-btn").forEach(btn => {
     btn.classList.remove("active");
   });
 
-  // Thêm active cho nút đang chọn
   const selectedBtn = document.querySelector(`.type-btn.${level}`);
   if (selectedBtn) {
     selectedBtn.classList.add("active");
   }
 }
 
-// Hàm phát âm: nhận romaji, tìm hiragana ưu tiên, fallback katakana, fallback romaji
-function playJapanese(romaji) {
-  const hiraObj = quizData.find(q => q.romaji === romaji && q.type === "hiragana");
-  const kataObj = quizData.find(q => q.romaji === romaji && q.type === "katakana");
-  const goaiObj = quizData.find(q => q.romaji === romaji && q.type === "goaisatsu");
 
-  // Ưu tiên: Hiragana > Katakana > Goaisatsu > Romaji
-  const textToSpeak = hiraObj ? hiraObj.char 
-                      : kataObj ? kataObj.char 
-                      : goaiObj ? goaiObj.char 
-                      : romaji;
+// Hàm phát âm: nhận romaji, tìm hiragana ưu tiên, fallback katakana, fallback romaji
+function playJapanese(input) {
+  // input có thể là:
+  // - text tiếng Nhật (hiragana/katakana/kanji) => speak trực tiếp
+  // - hoặc khóa tra cứu (ví dụ romaji "ka" hoặc nghĩa "Cố gắng...") => tìm trong quizData
+  if (!input && input !== "") return;
+
+  // phát hiện nếu input chứa ký tự Nhật (hiragana/katakana/kanji)
+  const hasJapaneseChars = /[\u3040-\u30FF\u4E00-\u9FFF]/.test(input);
+  let textToSpeak = input;
+
+  if (!hasJapaneseChars) {
+    // tìm trong quizData theo romaji (bao gồm cả goaisatsu và goi)
+    const found = quizData.find(q =>
+      q.romaji === input &&
+      ["hiragana", "katakana", "goaisatsu", "goi"].includes(q.type)
+    );
+    if (found) {
+      textToSpeak = found.char;
+    }
+    // nếu vẫn không tìm được, textToSpeak = input (fallback)
+  }
 
   if ('speechSynthesis' in window) {
     speechSynthesis.cancel();
 
     const speakNow = () => {
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
-      utterance.lang = "ja-JP";   // ép buộc tiếng Nhật
-      utterance.rate = 0.8;       // tốc độ đọc chậm, dễ nghe
+      // thường đọc bằng giọng Nhật
+      utterance.lang = "ja-JP";
+      utterance.rate = 0.85;
       utterance.pitch = 1.0;
 
-      // Tìm giọng Nhật trong danh sách
       const voices = speechSynthesis.getVoices();
       const jaVoice = voices.find(v => v.lang && v.lang.toLowerCase().includes("ja"));
-      if (jaVoice) {
-        utterance.voice = jaVoice;
-      }
+      if (jaVoice) utterance.voice = jaVoice;
 
       speechSynthesis.speak(utterance);
     };
 
-    // Nếu voices chưa load -> đợi event
+    // nếu voices chưa load thì đợi
     if (speechSynthesis.getVoices().length === 0) {
       speechSynthesis.onvoiceschanged = () => {
         speakNow();
@@ -672,7 +716,7 @@ function showGoaisatsu() {
 
   container.innerHTML = `
     <div class="fade-in">
-      <h2>👋 Các câu chào hỏi (ごあいさつ)</h2>
+      <h2>👋 Các câu cơ bản</h2>
       <table class="alphabet-table">
         <thead>
           <tr>
@@ -691,6 +735,94 @@ function showGoaisatsu() {
     </div>
   `;
 }
+
+function showGoi() {
+  const container = document.getElementById("quiz-container");
+  const vocab = quizData.filter(q => q.type === "goi");
+
+  let rows = vocab.map(g => {
+    // an toàn: escape single-quote để chèn vào onclick
+    const speakText = String(g.char).replace(/'/g, "\\'");
+    const highlightedChar = applyHighlights(g.char, g.highlights || []);
+
+    return `
+      <tr>
+        <td class="char">${highlightedChar}</td>
+        <td>${g.romaji}</td>
+        <td style="text-align:center;">
+          <button class="sound-btn" onclick="playJapanese('${speakText}')">🔊</button>
+        </td>
+      </tr>
+    `;
+  }).join("");
+
+  container.innerHTML = `
+    <div class="fade-in">
+      <h2>📖 Từ vựng</h2>
+      <table class="alphabet-table">
+        <thead>
+          <tr>
+            <th>Tiếng Nhật</th>
+            <th>Nghĩa</th>
+            <th>Nghe</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+      <br/>
+      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="end-btn" onclick="showStartScreen()">Quay lại màn hình chính</button>
+    </div>
+  `;
+}
+
+// Hàm highlight nhiều ký tự trong 1 chuỗi
+function applyHighlights(text, highlights = []) {
+  if (!highlights || highlights.length === 0) return text;
+  let result = text;
+
+  highlights.forEach(h => {
+    if (!h || !h.text) return;
+    const safe = h.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    // nth xử lý: nth >0 => lần thứ n, nth === -1 => lần cuối cùng
+    if (typeof h.nth !== "undefined") {
+      if (h.nth === -1) {
+        // replace last occurrence only
+        const matches = [...result.matchAll(new RegExp(safe, "g"))];
+        if (matches.length > 0) {
+          const last = matches[matches.length - 1];
+          const start = last.index;
+          const before = result.slice(0, start);
+          const after = result.slice(start + last[0].length);
+          const replacement = `<span style="color:${h.color}; font-weight:bold;">${last[0]}</span>`;
+          result = before + replacement + after;
+        }
+      } else {
+        // replace only the nth occurrence
+        let count = 0;
+        result = result.replace(new RegExp(safe, "g"), m => {
+          count++;
+          if (count === h.nth) return `<span style="color:${h.color}; font-weight:bold;">${m}</span>`;
+          return m;
+        });
+      }
+    } else if (h.once) {
+      // chỉ thay lần đầu
+      result = result.replace(new RegExp(safe), m => `<span style="color:${h.color}; font-weight:bold;">${m}</span>`);
+    } else {
+      // thay tất cả
+      result = result.replace(new RegExp(safe, "g"), m => `<span style="color:${h.color}; font-weight:bold;">${m}</span>`);
+    }
+  });
+
+  return result;
+}
+
+
+
 
 
 // Bắt đầu
@@ -743,6 +875,7 @@ document.getElementById("quiz-container").innerHTML = `
     <button class="type-btn hiragana" onclick="setType('hiragana')">Hiragana</button>
     <button class="type-btn katakana" onclick="setType('katakana')">Katakana</button>
     <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu cơ bản</button>
+    <button class="type-btn goi" onclick="setType('goi')">Từ vựng</button>
   </div>
   <p>Chọn độ khó:</p>
   <div class="difficulty-buttons">
@@ -753,4 +886,5 @@ document.getElementById("quiz-container").innerHTML = `
   <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
   <button class="end-btn" onclick="showAlphabet()">Xem bảng chữ cái</button>
   <button class="end-btn" onclick="showGoaisatsu()">Xem câu cơ bản</button>
+  <button class="end-btn" onclick="showGoi()">Xem từ vựng</button>
 `
