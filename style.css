@@ -630,3 +630,103 @@ button.start-btn:hover, button.end-btn:hover {
   box-shadow: 0 6px 14px rgba(28, 134, 255);
   transform: scale(1.03);
 }
+
+.quiz-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.quiz-header, .quiz-footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.quiz-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.quiz-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Responsive: tự co khi màn nhỏ */
+@media (max-width: 600px) {
+  .quiz-wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+  .char {
+    font-size: 48px;
+  }
+  .option-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Đảm bảo quiz-wrapper nằm giữa */
+.quiz-wrapper {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 20px auto;
+}
+
+/* Khoảng cách rõ ràng giữa các nhóm chọn */
+.quiz-wrapper p {
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Gom nút thành block đẹp */
+.time-buttons, .count-buttons, .type-buttons, .difficulty-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0 16px;
+}
+
+/* Nút chung */
+.time-btn, .count-btn, .type-btn, .difficulty-btn, .start-btn, .end-btn {
+  min-width: 70px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Nhóm nút hành động */
+.start-btn, .end-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 15px;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  .quiz-wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+  .char {
+    font-size: 56px;
+  }
+  .option-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .time-btn, .count-btn, .type-btn, .difficulty-btn {
+    flex: 1 1 100px;  /* cho nút tự giãn đều */
+  }
+}
