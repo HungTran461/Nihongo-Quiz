@@ -1114,7 +1114,7 @@ function showGoaisatsu(group = "all") {
   // === Hiển thị bảng ===
   container.innerHTML = `
     <div class="fade-in">
-      <h2>Câu cơ bản (${currentGroup === "all" ? "Tất cả" : currentGroup})</h2>
+      <h2>Câu cơ bản</h2>
       ${groupButtonsHtml}
       <table class="alphabet-table">
         <thead>
