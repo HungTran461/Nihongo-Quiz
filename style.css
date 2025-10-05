@@ -730,3 +730,42 @@ button.start-btn:hover, button.end-btn:hover {
     flex: 1 1 100px;  /* cho nút tự giãn đều */
   }
 }
+
+
+
+.group-buttons, .sub-type-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.group-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #ffcc80;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.group-btn.active {
+  background: #fb8c00;
+  box-shadow: 0 0 8px rgba(251,140,0,0.6);
+  transform: scale(1.05);
+}
+
+.sub-type-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 18px;
+  background: #90caf9;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sub-type-buttons button:hover {
+  background: #1565c0;
+}
