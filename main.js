@@ -5,6 +5,7 @@
 
 // Dữ liệu: Hiragana và Katakana
 const quizData = [
+  
   // ========================
   // Hiragana (あ〜ん)
   // ========================
@@ -154,6 +155,7 @@ const quizData = [
   { char: "プ", romaji: "pu", type: "katakana" ,group : "bienam"},
   { char: "ペ", romaji: "pe", type: "katakana" ,group : "bienam"},
   { char: "ポ", romaji: "po", type: "katakana" ,group : "bienam"},
+
   // ========================
   // Go Aisatsu (ごあいさつ) - cho romaji là nghĩa luôn đỡ phải sửa code nhiều
   // ========================
@@ -302,6 +304,7 @@ const quizData = [
   { char: "めりーくりすます！", romaji: "Giáng sinh vui vẻ!", type: "goaisatsu", group: "season" },
   { char: "おしょうがつやすみはどうでしたか。", romaji: "Kỳ nghỉ năm mới thế nào?", type: "goaisatsu", group: "season" },
   { char: "ことしもよろしくおねがいします。", romaji: "Mong được giúp đỡ trong năm nay!", type: "goaisatsu", group: "season" },
+
   // ========================
   // Goi (語彙 - ごい) - cho romaji là nghĩa luôn đỡ phải sửa code nhiều
   // ========================
