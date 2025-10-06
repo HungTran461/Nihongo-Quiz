@@ -331,17 +331,17 @@ const quizData = [
   { char: "さか", romaji: "Con dốc", type: "goi",highlights:[{text : "か",color :"red"}]},
   { char: "さけ", romaji: "Rượu Sake", type: "goi",highlights:[{text : "け",color :"red"}]},
   { char: "うそ", romaji: "Lời nói dối", type: "goi",highlights:[{text : "う",color :"red"}]},
-  //Gia đình
-  { char: "かぞく（家族）", romaji: "Gia đình", type: "goi", group: "giadinh" },
-  { char: "はは（母）", romaji: "Mẹ", type: "goi", group: "giadinh" },
-  { char: "ちち（父）", romaji: "Cha", type: "goi", group: "giadinh" },
-  { char: "きょうだい（兄弟）", romaji: "Anh chị em", type: "goi", group: "giadinh" },
-  { char: "あね（姉）", romaji: "Chị gái", type: "goi", group: "giadinh" },
-  { char: "あに（兄）", romaji: "Anh trai", type: "goi", group: "giadinh" },
-  { char: "いもうと（妹）", romaji: "Em gái", type: "goi", group: "giadinh" },
-  { char: "おとうと（弟）", romaji: "Em trai", type: "goi", group: "giadinh" },
-  { char: "そふ（祖父）", romaji: "Ông", type: "goi", group: "giadinh" },
-  { char: "そぼ（祖母）", romaji: "Bà", type: "goi", group: "giadinh" },
+  //Gia đình, xưng hô
+  { char: "かぞく（家族）", romaji: "Gia đình", type: "goi", group: "giadinh_xungho" },
+  { char: "はは（母）", romaji: "Mẹ", type: "goi", group: "giadinh_xungho" },
+  { char: "ちち（父）", romaji: "Cha", type: "goi", group: "giadinh_xungho" },
+  { char: "きょうだい（兄弟）", romaji: "Anh chị em", type: "goi", group: "giadinh_xungho" },
+  { char: "あね（姉）", romaji: "Chị gái", type: "goi", group: "giadinh_xungho" },
+  { char: "あに（兄）", romaji: "Anh trai", type: "goi", group: "giadinh_xungho" },
+  { char: "いもうと（妹）", romaji: "Em gái", type: "goi", group: "giadinh_xungho" },
+  { char: "おとうと（弟）", romaji: "Em trai", type: "goi", group: "giadinh_xungho" },
+  { char: "そふ（祖父）", romaji: "Ông", type: "goi", group: "giadinh_xungho" },
+  { char: "そぼ（祖母）", romaji: "Bà", type: "goi", group: "giadinh_xungho" },
   //Đồ ăn
   { char: "たべもの（食べ物）", romaji: "Thức ăn", type: "goi", group: "doan" },
   { char: "のみもの（飲み物）", romaji: "Đồ uống", type: "goi", group: "doan" },
@@ -449,6 +449,44 @@ const quizData = [
   { char: "もくようび（木曜日）", romaji: "Thứ năm", type: "goi", group: "thutrongtuan" },
   { char: "きんようび（金曜日）", romaji: "Thứ sáu", type: "goi", group: "thutrongtuan" },
   { char: "どようび（土曜日）", romaji: "Thứ bảy", type: "goi", group: "thutrongtuan" },
+  //Bài nghe 1
+  { char: "わたし", romaji: "Tôi", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "あなた", romaji: "Bạn", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "あのひと", romaji: "Người kia", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "あのかた", romaji: "Vị kia (lịch sự)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "けいしょう", romaji: "Kính xưng, cách gọi tôn kính", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "さん", romaji: "Anh / chị / ông / bà (hậu tố)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "ちゃん", romaji: "Cách gọi thân mật (bé / bạn thân)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
+  { char: "せんせい", romaji: "Thầy / cô", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "きょうし", romaji: "Giáo viên", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "がくせい", romaji: "Học sinh, sinh viên", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "かいしゃいん", romaji: "Nhân viên công ty", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "ぎんこういん", romaji: "Nhân viên ngân hàng", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "いしゃ", romaji: "Bác sĩ", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "けんきゅうしゃ", romaji: "Nhà nghiên cứu", type: "goi", group: ["gol1_3","nghenghiep"] },
+  { char: "だいがく", romaji: "Đại học", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "びょういん", romaji: "Bệnh viện", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "だれ", romaji: "Ai", type: "goi", group: ["gol1_3","hoidapngan" ]},
+  { char: "どなた", romaji: "Vị nào (lịch sự của 誰)", type: "goi", group: ["gol1_3","hoidapngan" ] },
+  { char: "なんさい", romaji: "Mấy tuổi", type: "goi", group: ["gol1_3","hoidapngan" ] },
+  { char: "おいくつ", romaji: "Bao nhiêu tuổi (lịch sự)", type: "goi", group: ["gol1_3","hoidapngan" ] },
+  { char: "アメリカ", romaji: "Mỹ", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "イギリス", romaji: "Anh (UK)", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "インド", romaji: "Ấn Độ", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "インドネシア", romaji: "Indonesia", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "かんこく", romaji: "Hàn Quốc", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "タイ", romaji: "Thái Lan", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "ちゅうごく", romaji: "Trung Quốc", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "ドイツ", romaji: "Đức", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "にほん", romaji: "Nhật Bản", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "ブラジル", romaji: "Brazil", type: "goi", group: ["gol1_3","quocgia"] },
+  { char: "アイエムシー", romaji: "Công ty IMC", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "パワーでんき", romaji: "Công ty điện Power", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "ブラジルエアー", romaji: "Hãng hàng không Brazil", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "エーケーシー", romaji: "Công ty AKC", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "こうべびょういん", romaji: "Bệnh viện Kobe", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "さくらだいがく", romaji: "Đại học Sakura", type: "goi", group: ["gol1_3","diadiem"] },
+  { char: "ふじだいがく", romaji: "Đại học Fuji", type: "goi", group: ["gol1_3","diadiem"] }
 ];
 
 const typeGroups = {
@@ -485,7 +523,7 @@ const typeGroups = {
   ],
   goi: [
     { id: "all", label: "Tất cả" },
-    { id: "giadinh",  label:  "Gia đình"},
+    { id: "giadinh_xungho",  label:  "Gia đình và xưng hô"},
     { id: "doan",  label:  "Đồ ăn"},
     { id: "nghenghiep", label: "Nghề nghiệp" },
     { id: "hoctap", label: "Học tập" },
@@ -495,7 +533,11 @@ const typeGroups = {
     { id: "camxuc", label: "Cảm xúc" },
     { id: "mausac", label: "Màu sắc" },
     { id: "vitri", label: "Vị trí" },
+    { id: "diadiem", label: "Địa điểm" },
+    { id: "quocgia", label: "Quốc gia" },
+    { id: "hoidapngan", label: "Hỏi đáp ngắn" },
     { id: "thutrongtuan", label: "Thứ trong tuần" },
+    { id: "gol1_3", label: "Bài nghe 1" },
   ]
 };
 
@@ -538,38 +580,6 @@ document.getElementById("modal-close").onclick = () => {
 document.addEventListener('DOMContentLoaded', () => {
   initShapes();
 });
-
-function renderMainGroupButtons(type) {
-  const groupLabel = document.getElementById("group-label");
-  const groupButtons = document.getElementById("group-buttons");
-
-  // Nếu type không có trong typeGroups thì ẩn
-  if (!typeGroups[type]) {
-    groupLabel.style.display = "none";
-    groupButtons.style.display = "none";
-    currentGroup = "all";
-    return;
-  }
-
-  // Lấy danh sách group theo type
-  const groups = typeGroups[type];
-
-  // Luôn hiện
-  groupLabel.style.display = "block";
-  groupButtons.style.display = "flex";
-
-  // Render các nút với label
-  groupButtons.innerHTML = groups.map(g => `
-    <button class="group-btn ${g.id} ${currentGroup === g.id ? "active" : ""}"
-            onclick="setGroup('${g.id}')">
-      ${g.label}
-    </button>
-  `).join("");
-
-  // Reset về all nếu chưa chọn gì
-  currentGroup = "all";
-}
-
 
 
 function renderMainGroupButtons(type) {
@@ -659,12 +669,18 @@ function shuffle(array) {
 function generateQuestions(num = 15) {
   const pool = quizData.filter(q => {
   if (currentType === "all") return true;
+  const inGroup =
+    currentGroup === "all" ||
+    (Array.isArray(q.group)
+      ? q.group.includes(currentGroup)
+      : q.group === currentGroup);
   if (currentType === "alphabet") {
-    return (q.type === "hiragana" || q.type === "katakana") &&
-           (currentGroup === "all" || q.group === currentGroup);
-    }
-    return q.type === currentType && (currentGroup === "all" || q.group === currentGroup);
-  });
+    return (q.type === "hiragana" || q.type === "katakana") && inGroup;
+  }
+  return q.type === currentType && inGroup;
+});
+
+
 
 
   const actualNum = Math.min(num, pool.length);
@@ -1011,10 +1027,17 @@ function showAlphabet(group = "all") {
   const container = document.getElementById("quiz-container");
 
   // lấy cả hiragana + katakana
-  const filteredData = quizData.filter(q =>
-    (q.type === "hiragana" || q.type === "katakana") &&
-    (currentGroup === "all" || q.group === currentGroup)
-  );
+  const filteredData = quizData.filter(q => {
+  const matchType = q.type === "hiragana" || q.type === "katakana";
+  const matchGroup =
+    currentGroup === "all" ||
+    (Array.isArray(q.group)
+      ? q.group.includes(currentGroup)
+      : q.group === currentGroup);
+  return matchType && matchGroup;
+  });
+
+
 
   // gom theo romaji
   const romajiSet = [...new Set(filteredData.map(q => q.romaji))];
@@ -1075,10 +1098,17 @@ function showGoaisatsu(group = "all") {
   const container = document.getElementById("quiz-container");
 
   // Lọc dữ liệu theo group (nếu có)
-  const filteredData = quizData.filter(q =>
-    q.type === "goaisatsu" &&
-    (currentGroup === "all" || q.group === currentGroup)
-  );
+  const filteredData = quizData.filter(q => {
+  const matchType = q.type === "goaisatsu";
+  const matchGroup =
+    currentGroup === "all" ||
+    (Array.isArray(q.group)
+      ? q.group.includes(currentGroup)
+      : q.group === currentGroup);
+  return matchType && matchGroup;
+  });
+
+
 
   // Sinh các hàng hiển thị
   let rows = filteredData.map(item => `
@@ -1139,10 +1169,17 @@ function showGoi(group = "all") {
   const container = document.getElementById("quiz-container");
 
   // Lọc dữ liệu theo group
-  const filteredData = quizData.filter(q =>
-    q.type === "goi" &&
-    (currentGroup === "all" || q.group === currentGroup)
-  );
+  const filteredData = quizData.filter(q => {
+  const matchType = q.type === "goi";
+  const matchGroup =
+    currentGroup === "all" ||
+    (Array.isArray(q.group)
+      ? q.group.includes(currentGroup)
+      : q.group === currentGroup);
+  return matchType && matchGroup;
+  });
+
+
 
   // Sinh các hàng hiển thị
   let rows = filteredData.map(item => {
@@ -1239,6 +1276,7 @@ function applyHighlights(text, highlights = []) {
 
 function setGroup(group) {
   currentGroup = group;
+  console.log("👉 Nhóm đang chọn:", group);
 
   // cập nhật active cho group
   document.querySelectorAll(".group-btn").forEach(btn => btn.classList.remove("active"));
