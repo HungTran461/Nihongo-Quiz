@@ -668,20 +668,20 @@ function shuffle(array) {
 // Sinh câu hỏi (lọc theo currentType)
 function generateQuestions(num = 15) {
   const pool = quizData.filter(q => {
-  if (currentType === "all") return true;
-  const inGroup =
-    currentGroup === "all" ||
-    (Array.isArray(q.group)
-      ? q.group.includes(currentGroup)
-      : q.group === currentGroup);
-  if (currentType === "alphabet") {
-    return (q.type === "hiragana" || q.type === "katakana") && inGroup;
-  }
-  return q.type === currentType && inGroup;
-});
+    const matchType =
+      currentType === "all" ||
+      (currentType === "alphabet"
+        ? q.type === "hiragana" || q.type === "katakana"
+        : q.type === currentType);
 
+    const matchGroup =
+      currentGroup === "all" ||
+      (Array.isArray(q.group)
+        ? q.group.includes(currentGroup)
+        : q.group === currentGroup);
 
-
+    return matchType && matchGroup;
+  });
 
   const actualNum = Math.min(num, pool.length);
   const selected = shuffle(pool).slice(0, actualNum);
@@ -691,10 +691,20 @@ function generateQuestions(num = 15) {
     if (difficulty === "medium") wrongCount = 5;
     if (difficulty === "hard") wrongCount = 7;
 
+    // ✅ FIX QUAN TRỌNG: lọc đáp án sai cũng phải kiểm tra group dạng mảng
     const wrong = shuffle(
-      quizData.filter(
-        item => item.romaji !== q.romaji && item.type === q.type && (currentGroup === "all" || item.group === currentGroup)
-      )
+      quizData.filter(item => {
+        const sameType = item.type === q.type;
+        const notSameWord = item.romaji !== q.romaji;
+
+        const inSameGroup =
+          currentGroup === "all" ||
+          (Array.isArray(item.group)
+            ? item.group.includes(currentGroup)
+            : item.group === currentGroup);
+
+        return sameType && notSameWord && inSameGroup;
+      })
     ).slice(0, wrongCount);
 
     const options = shuffle([q, ...wrong]);
@@ -708,6 +718,7 @@ function generateQuestions(num = 15) {
     };
   });
 }
+
 
 
 // sau initShapes(); hoặc trong DOMContentLoaded
