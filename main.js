@@ -293,8 +293,6 @@ const quizData = [
 
   // === Trong gia đình / bạn bè ===
   { char: "おかえり。きょうはどうだった？", romaji: "Chào mừng về nhà, hôm nay thế nào?", type: "goaisatsu", group: "kazoku" },
-  { char: "いってきます。", romaji: "Tôi đi nhé!", type: "goaisatsu", group: "kazoku" },
-  { char: "いってらっしゃい。", romaji: "Đi nhé!", type: "goaisatsu", group: "kazoku" },
   { char: "おなかすいた？", romaji: "Đói chưa?", type: "goaisatsu", group: "kazoku" },
   { char: "だいじょうぶ？", romaji: "Ổn không?", type: "goaisatsu", group: "kazoku" },
 
