@@ -80,6 +80,51 @@ const quizData = [
   { char: "ぷ", romaji: "pu", type: "hiragana" ,group : "bienam"},
   { char: "ぺ", romaji: "pe", type: "hiragana" ,group : "bienam"},
   { char: "ぽ", romaji: "po", type: "hiragana" ,group : "bienam"},
+   // --- ẢO ÂM (Hiragana) ---
+  { char: "きゃ", romaji: "kya", type: "hiragana", group: "aoam" },
+  { char: "きゅ", romaji: "kyu", type: "hiragana", group: "aoam" },
+  { char: "きょ", romaji: "kyo", type: "hiragana", group: "aoam" },
+
+  { char: "しゃ", romaji: "sha", type: "hiragana", group: "aoam" },
+  { char: "しゅ", romaji: "shu", type: "hiragana", group: "aoam" },
+  { char: "しょ", romaji: "sho", type: "hiragana", group: "aoam" },
+
+  { char: "ちゃ", romaji: "cha", type: "hiragana", group: "aoam" },
+  { char: "ちゅ", romaji: "chu", type: "hiragana", group: "aoam" },
+  { char: "ちょ", romaji: "cho", type: "hiragana", group: "aoam" },
+
+  { char: "にゃ", romaji: "nya", type: "hiragana", group: "aoam" },
+  { char: "にゅ", romaji: "nyu", type: "hiragana", group: "aoam" },
+  { char: "にょ", romaji: "nyo", type: "hiragana", group: "aoam" },
+
+  { char: "ひゃ", romaji: "hya", type: "hiragana", group: "aoam" },
+  { char: "ひゅ", romaji: "hyu", type: "hiragana", group: "aoam" },
+  { char: "ひょ", romaji: "hyo", type: "hiragana", group: "aoam" },
+
+  { char: "みゃ", romaji: "mya", type: "hiragana", group: "aoam" },
+  { char: "みゅ", romaji: "myu", type: "hiragana", group: "aoam" },
+  { char: "みょ", romaji: "myo", type: "hiragana", group: "aoam" },
+
+  { char: "りゃ", romaji: "rya", type: "hiragana", group: "aoam" },
+  { char: "りゅ", romaji: "ryu", type: "hiragana", group: "aoam" },
+  { char: "りょ", romaji: "ryo", type: "hiragana", group: "aoam" },
+
+  // --- ẢO ÂM BIẾN ÂM (Hiragana) ---
+  { char: "ぎゃ", romaji: "gya", type: "hiragana", group: "aoam" },
+  { char: "ぎゅ", romaji: "gyu", type: "hiragana", group: "aoam" },
+  { char: "ぎょ", romaji: "gyo", type: "hiragana", group: "aoam" },
+
+  { char: "じゃ", romaji: "ja", type: "hiragana", group: "aoam" },
+  { char: "じゅ", romaji: "ju", type: "hiragana", group: "aoam" },
+  { char: "じょ", romaji: "jo", type: "hiragana", group: "aoam" },
+
+  { char: "びゃ", romaji: "bya", type: "hiragana", group: "aoam" },
+  { char: "びゅ", romaji: "byu", type: "hiragana", group: "aoam" },
+  { char: "びょ", romaji: "byo", type: "hiragana", group: "aoam" },
+
+  { char: "ぴゃ", romaji: "pya", type: "hiragana", group: "aoam" },
+  { char: "ぴゅ", romaji: "pyu", type: "hiragana", group: "aoam" },
+  { char: "ぴょ", romaji: "pyo", type: "hiragana", group: "aoam" },
 
   // ========================
   // Katakana (ア〜ン)
@@ -155,6 +200,52 @@ const quizData = [
   { char: "プ", romaji: "pu", type: "katakana" ,group : "bienam"},
   { char: "ペ", romaji: "pe", type: "katakana" ,group : "bienam"},
   { char: "ポ", romaji: "po", type: "katakana" ,group : "bienam"},
+  // --- ẢO ÂM (Katakana) ---
+  { char: "キャ", romaji: "kya", type: "katakana", group: "aoam" },
+  { char: "キュ", romaji: "kyu", type: "katakana", group: "aoam" },
+  { char: "キョ", romaji: "kyo", type: "katakana", group: "aoam" },
+
+  { char: "シャ", romaji: "sha", type: "katakana", group: "aoam" },
+  { char: "シュ", romaji: "shu", type: "katakana", group: "aoam" },
+  { char: "ショ", romaji: "sho", type: "katakana", group: "aoam" },
+
+  { char: "チャ", romaji: "cha", type: "katakana", group: "aoam" },
+  { char: "チュ", romaji: "chu", type: "katakana", group: "aoam" },
+  { char: "チョ", romaji: "cho", type: "katakana", group: "aoam" },
+
+  { char: "ニャ", romaji: "nya", type: "katakana", group: "aoam" },
+  { char: "ニュ", romaji: "nyu", type: "katakana", group: "aoam" },
+  { char: "ニョ", romaji: "nyo", type: "katakana", group: "aoam" },
+
+  { char: "ヒャ", romaji: "hya", type: "katakana", group: "aoam" },
+  { char: "ヒュ", romaji: "hyu", type: "katakana", group: "aoam" },
+  { char: "ヒョ", romaji: "hyo", type: "katakana", group: "aoam" },
+
+  { char: "ミャ", romaji: "mya", type: "katakana", group: "aoam" },
+  { char: "ミュ", romaji: "myu", type: "katakana", group: "aoam" },
+  { char: "ミョ", romaji: "myo", type: "katakana", group: "aoam" },
+
+  { char: "リャ", romaji: "rya", type: "katakana", group: "aoam" },
+  { char: "リュ", romaji: "ryu", type: "katakana", group: "aoam" },
+  { char: "リョ", romaji: "ryo", type: "katakana", group: "aoam" },
+
+  // --- ẢO ÂM BIẾN ÂM (Katakana) ---
+  { char: "ギャ", romaji: "gya", type: "katakana", group: "aoam" },
+  { char: "ギュ", romaji: "gyu", type: "katakana", group: "aoam" },
+  { char: "ギョ", romaji: "gyo", type: "katakana", group: "aoam" },
+
+  { char: "ジャ", romaji: "ja", type: "katakana", group: "aoam" },
+  { char: "ジュ", romaji: "ju", type: "katakana", group: "aoam" },
+  { char: "ジョ", romaji: "jo", type: "katakana", group: "aoam" },
+
+  { char: "ビャ", romaji: "bya", type: "katakana", group: "aoam" },
+  { char: "ビュ", romaji: "byu", type: "katakana", group: "aoam" },
+  { char: "ビョ", romaji: "byo", type: "katakana", group: "aoam" },
+
+  { char: "ピャ", romaji: "pya", type: "katakana", group: "aoam" },
+  { char: "ピュ", romaji: "pyu", type: "katakana", group: "aoam" },
+  { char: "ピョ", romaji: "pyo", type: "katakana", group: "aoam" },
+
 
   // ========================
   // Go Aisatsu (ごあいさつ) - cho romaji là nghĩa luôn đỡ phải sửa code nhiều
@@ -545,12 +636,14 @@ const typeGroups = {
   hiragana: [
     { id: "all", label: "Tất cả" },
     { id: "nguyenam", label: "Nguyên âm" },
-    { id: "bienam", label: "Biến âm" }
+    { id: "bienam", label: "Biến âm" },
+    { id: "aoam", label: "Ảo âm" }
   ],
   katakana: [
     { id: "all", label: "Tất cả" },
     { id: "nguyenam", label: "Nguyên âm" },
-    { id: "bienam", label: "Biến âm" }
+    { id: "bienam", label: "Biến âm" },
+    { id: "aoam", label: "Ảo âm" }
   ],
   goaisatsu: [
     { id: "all", label: "Tất cả" },
@@ -1133,6 +1226,7 @@ function showAlphabet(group = "all") {
       <button class="group-btn all ${currentGroup === "all" ? "active" : ""}" onclick="showAlphabet('all')">Tất cả</button>
       <button class="group-btn nguyenam ${currentGroup === "nguyenam" ? "active" : ""}" onclick="showAlphabet('nguyenam')">Nguyên âm</button>
       <button class="group-btn bienam ${currentGroup === "bienam" ? "active" : ""}" onclick="showAlphabet('bienam')">Biến âm</button>
+      <button class="group-btn aoam ${currentGroup === "aoam" ? "active" : ""}" onclick="showAlphabet('aoam')">Ảo âm</button>
     </div>
   `;
 
