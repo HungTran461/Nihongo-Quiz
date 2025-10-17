@@ -9,52 +9,52 @@ const quizData = [
   // ========================
   // Hiragana (あ〜ん)
   // ========================
-  { char: "あ", romaji: "a", type: "hiragana" ,group : "nguyenam"},
-  { char: "い", romaji: "i", type: "hiragana" ,group : "nguyenam"},
-  { char: "う", romaji: "u", type: "hiragana" ,group : "nguyenam"},
-  { char: "え", romaji: "e", type: "hiragana" ,group : "nguyenam"},
-  { char: "お", romaji: "o", type: "hiragana" ,group : "nguyenam"},
-  { char: "か", romaji: "ka", type: "hiragana" ,group : "nguyenam"},
-  { char: "き", romaji: "ki", type: "hiragana" ,group : "nguyenam"},
-  { char: "く", romaji: "ku", type: "hiragana" ,group : "nguyenam"},
-  { char: "け", romaji: "ke", type: "hiragana" ,group : "nguyenam"},
-  { char: "こ", romaji: "ko", type: "hiragana" ,group : "nguyenam"},
-  { char: "さ", romaji: "sa", type: "hiragana" ,group : "nguyenam"},
-  { char: "し", romaji: "shi", type: "hiragana" ,group : "nguyenam"},
-  { char: "す", romaji: "su", type: "hiragana" ,group : "nguyenam"},
-  { char: "せ", romaji: "se", type: "hiragana" ,group : "nguyenam"},
-  { char: "そ", romaji: "so", type: "hiragana" ,group : "nguyenam"},
-  { char: "た", romaji: "ta", type: "hiragana" ,group : "nguyenam"},
-  { char: "ち", romaji: "chi", type: "hiragana" ,group : "nguyenam"},
-  { char: "つ", romaji: "tsu", type: "hiragana" ,group : "nguyenam"},
-  { char: "て", romaji: "te", type: "hiragana" ,group : "nguyenam"},
-  { char: "と", romaji: "to", type: "hiragana" ,group : "nguyenam"},
-  { char: "な", romaji: "na", type: "hiragana" ,group : "nguyenam"},
-  { char: "に", romaji: "ni", type: "hiragana" ,group : "nguyenam"},
-  { char: "ぬ", romaji: "nu", type: "hiragana" ,group : "nguyenam"},
-  { char: "ね", romaji: "ne", type: "hiragana" ,group : "nguyenam"},
-  { char: "の", romaji: "no", type: "hiragana" ,group : "nguyenam"},
-  { char: "は", romaji: "ha", type: "hiragana" ,group : "nguyenam"},
-  { char: "ひ", romaji: "hi", type: "hiragana" ,group : "nguyenam"},
-  { char: "ふ", romaji: "fu", type: "hiragana" ,group : "nguyenam"},
-  { char: "へ", romaji: "he", type: "hiragana" ,group : "nguyenam"},
-  { char: "ほ", romaji: "ho", type: "hiragana" ,group : "nguyenam"},
-  { char: "ま", romaji: "ma", type: "hiragana" ,group : "nguyenam"},
-  { char: "み", romaji: "mi", type: "hiragana" ,group : "nguyenam"},
-  { char: "む", romaji: "mu", type: "hiragana" ,group : "nguyenam"},
-  { char: "め", romaji: "me", type: "hiragana" ,group : "nguyenam"},
-  { char: "も", romaji: "mo", type: "hiragana" ,group : "nguyenam"},
-  { char: "や", romaji: "ya", type: "hiragana" ,group : "nguyenam"},
-  { char: "ゆ", romaji: "yu", type: "hiragana" ,group : "nguyenam"},
-  { char: "よ", romaji: "yo", type: "hiragana" ,group : "nguyenam"},
-  { char: "ら", romaji: "ra", type: "hiragana" ,group : "nguyenam"},
-  { char: "り", romaji: "ri", type: "hiragana" ,group : "nguyenam"},
-  { char: "る", romaji: "ru", type: "hiragana" ,group : "nguyenam"},
-  { char: "れ", romaji: "re", type: "hiragana" ,group : "nguyenam"},
-  { char: "ろ", romaji: "ro", type: "hiragana" ,group : "nguyenam"},
-  { char: "わ", romaji: "wa", type: "hiragana" ,group : "nguyenam"},
-  { char: "を", romaji: "wo", type: "hiragana" ,group : "nguyenam"},
-  { char: "ん", romaji: "n", type: "hiragana" ,group : "nguyenam"},
+  { char: "あ", romaji: "a", type: "hiragana" ,group : "thanham"},
+  { char: "い", romaji: "i", type: "hiragana" ,group : "thanham"},
+  { char: "う", romaji: "u", type: "hiragana" ,group : "thanham"},
+  { char: "え", romaji: "e", type: "hiragana" ,group : "thanham"},
+  { char: "お", romaji: "o", type: "hiragana" ,group : "thanham"},
+  { char: "か", romaji: "ka", type: "hiragana" ,group : "thanham"},
+  { char: "き", romaji: "ki", type: "hiragana" ,group : "thanham"},
+  { char: "く", romaji: "ku", type: "hiragana" ,group : "thanham"},
+  { char: "け", romaji: "ke", type: "hiragana" ,group : "thanham"},
+  { char: "こ", romaji: "ko", type: "hiragana" ,group : "thanham"},
+  { char: "さ", romaji: "sa", type: "hiragana" ,group : "thanham"},
+  { char: "し", romaji: "shi", type: "hiragana" ,group : "thanham"},
+  { char: "す", romaji: "su", type: "hiragana" ,group : "thanham"},
+  { char: "せ", romaji: "se", type: "hiragana" ,group : "thanham"},
+  { char: "そ", romaji: "so", type: "hiragana" ,group : "thanham"},
+  { char: "た", romaji: "ta", type: "hiragana" ,group : "thanham"},
+  { char: "ち", romaji: "chi", type: "hiragana" ,group : "thanham"},
+  { char: "つ", romaji: "tsu", type: "hiragana" ,group : "thanham"},
+  { char: "て", romaji: "te", type: "hiragana" ,group : "thanham"},
+  { char: "と", romaji: "to", type: "hiragana" ,group : "thanham"},
+  { char: "な", romaji: "na", type: "hiragana" ,group : "thanham"},
+  { char: "に", romaji: "ni", type: "hiragana" ,group : "thanham"},
+  { char: "ぬ", romaji: "nu", type: "hiragana" ,group : "thanham"},
+  { char: "ね", romaji: "ne", type: "hiragana" ,group : "thanham"},
+  { char: "の", romaji: "no", type: "hiragana" ,group : "thanham"},
+  { char: "は", romaji: "ha", type: "hiragana" ,group : "thanham"},
+  { char: "ひ", romaji: "hi", type: "hiragana" ,group : "thanham"},
+  { char: "ふ", romaji: "fu", type: "hiragana" ,group : "thanham"},
+  { char: "へ", romaji: "he", type: "hiragana" ,group : "thanham"},
+  { char: "ほ", romaji: "ho", type: "hiragana" ,group : "thanham"},
+  { char: "ま", romaji: "ma", type: "hiragana" ,group : "thanham"},
+  { char: "み", romaji: "mi", type: "hiragana" ,group : "thanham"},
+  { char: "む", romaji: "mu", type: "hiragana" ,group : "thanham"},
+  { char: "め", romaji: "me", type: "hiragana" ,group : "thanham"},
+  { char: "も", romaji: "mo", type: "hiragana" ,group : "thanham"},
+  { char: "や", romaji: "ya", type: "hiragana" ,group : "thanham"},
+  { char: "ゆ", romaji: "yu", type: "hiragana" ,group : "thanham"},
+  { char: "よ", romaji: "yo", type: "hiragana" ,group : "thanham"},
+  { char: "ら", romaji: "ra", type: "hiragana" ,group : "thanham"},
+  { char: "り", romaji: "ri", type: "hiragana" ,group : "thanham"},
+  { char: "る", romaji: "ru", type: "hiragana" ,group : "thanham"},
+  { char: "れ", romaji: "re", type: "hiragana" ,group : "thanham"},
+  { char: "ろ", romaji: "ro", type: "hiragana" ,group : "thanham"},
+  { char: "わ", romaji: "wa", type: "hiragana" ,group : "thanham"},
+  { char: "を", romaji: "wo", type: "hiragana" ,group : "thanham"},
+  { char: "ん", romaji: "n", type: "hiragana" ,group : "thanham"},
   { char: "が", romaji: "ga", type: "hiragana" ,group : "bienam"},
   { char: "ぎ", romaji: "gi", type: "hiragana" ,group : "bienam"},
   { char: "ぐ", romaji: "gu", type: "hiragana" ,group : "bienam"},
@@ -129,52 +129,52 @@ const quizData = [
   // ========================
   // Katakana (ア〜ン)
   // ========================
-  { char: "ア", romaji: "a", type: "katakana" ,group : "nguyenam"},
-  { char: "イ", romaji: "i", type: "katakana" ,group : "nguyenam"},
-  { char: "ウ", romaji: "u", type: "katakana" ,group : "nguyenam"},
-  { char: "エ", romaji: "e", type: "katakana" ,group : "nguyenam"},
-  { char: "オ", romaji: "o", type: "katakana" ,group : "nguyenam"},
-  { char: "カ", romaji: "ka", type: "katakana" ,group : "nguyenam"},
-  { char: "キ", romaji: "ki", type: "katakana" ,group : "nguyenam"},
-  { char: "ク", romaji: "ku", type: "katakana" ,group : "nguyenam"},
-  { char: "ケ", romaji: "ke", type: "katakana" ,group : "nguyenam"},
-  { char: "コ", romaji: "ko", type: "katakana" ,group : "nguyenam"},
-  { char: "サ", romaji: "sa", type: "katakana" ,group : "nguyenam"},
-  { char: "シ", romaji: "shi", type: "katakana" ,group : "nguyenam"},
-  { char: "ス", romaji: "su", type: "katakana" ,group : "nguyenam"},
-  { char: "セ", romaji: "se", type: "katakana" ,group : "nguyenam"},
-  { char: "ソ", romaji: "so", type: "katakana" ,group : "nguyenam"},
-  { char: "タ", romaji: "ta", type: "katakana" ,group : "nguyenam"},
-  { char: "チ", romaji: "chi", type: "katakana" ,group : "nguyenam"},
-  { char: "ツ", romaji: "tsu", type: "katakana" ,group : "nguyenam"},
-  { char: "テ", romaji: "te", type: "katakana" ,group : "nguyenam"},
-  { char: "ト", romaji: "to", type: "katakana" ,group : "nguyenam"},
-  { char: "ナ", romaji: "na", type: "katakana" ,group : "nguyenam"},
-  { char: "ニ", romaji: "ni", type: "katakana" ,group : "nguyenam"},
-  { char: "ヌ", romaji: "nu", type: "katakana" ,group : "nguyenam"},
-  { char: "ネ", romaji: "ne", type: "katakana" ,group : "nguyenam"},
-  { char: "ノ", romaji: "no", type: "katakana" ,group : "nguyenam"},
-  { char: "ハ", romaji: "ha", type: "katakana" ,group : "nguyenam"},
-  { char: "ヒ", romaji: "hi", type: "katakana" ,group : "nguyenam"},
-  { char: "フ", romaji: "fu", type: "katakana" ,group : "nguyenam"},
-  { char: "ヘ", romaji: "he", type: "katakana" ,group : "nguyenam"},
-  { char: "ホ", romaji: "ho", type: "katakana" ,group : "nguyenam"},
-  { char: "マ", romaji: "ma", type: "katakana" ,group : "nguyenam"},
-  { char: "ミ", romaji: "mi", type: "katakana" ,group : "nguyenam"},
-  { char: "ム", romaji: "mu", type: "katakana" ,group : "nguyenam"},
-  { char: "メ", romaji: "me", type: "katakana" ,group : "nguyenam"},
-  { char: "モ", romaji: "mo", type: "katakana" ,group : "nguyenam"},
-  { char: "ヤ", romaji: "ya", type: "katakana" ,group : "nguyenam"},
-  { char: "ユ", romaji: "yu", type: "katakana" ,group : "nguyenam"},
-  { char: "ヨ", romaji: "yo", type: "katakana" ,group : "nguyenam"},
-  { char: "ラ", romaji: "ra", type: "katakana" ,group : "nguyenam"},
-  { char: "リ", romaji: "ri", type: "katakana" ,group : "nguyenam"},
-  { char: "ル", romaji: "ru", type: "katakana" ,group : "nguyenam"},
-  { char: "レ", romaji: "re", type: "katakana" ,group : "nguyenam"},
-  { char: "ロ", romaji: "ro", type: "katakana" ,group : "nguyenam"},
-  { char: "ワ", romaji: "wa", type: "katakana" ,group : "nguyenam"},
-  { char: "ヲ", romaji: "wo", type: "katakana" ,group : "nguyenam"},
-  { char: "ン", romaji: "n", type: "katakana" ,group : "nguyenam"},
+  { char: "ア", romaji: "a", type: "katakana" ,group : "thanham"},
+  { char: "イ", romaji: "i", type: "katakana" ,group : "thanham"},
+  { char: "ウ", romaji: "u", type: "katakana" ,group : "thanham"},
+  { char: "エ", romaji: "e", type: "katakana" ,group : "thanham"},
+  { char: "オ", romaji: "o", type: "katakana" ,group : "thanham"},
+  { char: "カ", romaji: "ka", type: "katakana" ,group : "thanham"},
+  { char: "キ", romaji: "ki", type: "katakana" ,group : "thanham"},
+  { char: "ク", romaji: "ku", type: "katakana" ,group : "thanham"},
+  { char: "ケ", romaji: "ke", type: "katakana" ,group : "thanham"},
+  { char: "コ", romaji: "ko", type: "katakana" ,group : "thanham"},
+  { char: "サ", romaji: "sa", type: "katakana" ,group : "thanham"},
+  { char: "シ", romaji: "shi", type: "katakana" ,group : "thanham"},
+  { char: "ス", romaji: "su", type: "katakana" ,group : "thanham"},
+  { char: "セ", romaji: "se", type: "katakana" ,group : "thanham"},
+  { char: "ソ", romaji: "so", type: "katakana" ,group : "thanham"},
+  { char: "タ", romaji: "ta", type: "katakana" ,group : "thanham"},
+  { char: "チ", romaji: "chi", type: "katakana" ,group : "thanham"},
+  { char: "ツ", romaji: "tsu", type: "katakana" ,group : "thanham"},
+  { char: "テ", romaji: "te", type: "katakana" ,group : "thanham"},
+  { char: "ト", romaji: "to", type: "katakana" ,group : "thanham"},
+  { char: "ナ", romaji: "na", type: "katakana" ,group : "thanham"},
+  { char: "ニ", romaji: "ni", type: "katakana" ,group : "thanham"},
+  { char: "ヌ", romaji: "nu", type: "katakana" ,group : "thanham"},
+  { char: "ネ", romaji: "ne", type: "katakana" ,group : "thanham"},
+  { char: "ノ", romaji: "no", type: "katakana" ,group : "thanham"},
+  { char: "ハ", romaji: "ha", type: "katakana" ,group : "thanham"},
+  { char: "ヒ", romaji: "hi", type: "katakana" ,group : "thanham"},
+  { char: "フ", romaji: "fu", type: "katakana" ,group : "thanham"},
+  { char: "ヘ", romaji: "he", type: "katakana" ,group : "thanham"},
+  { char: "ホ", romaji: "ho", type: "katakana" ,group : "thanham"},
+  { char: "マ", romaji: "ma", type: "katakana" ,group : "thanham"},
+  { char: "ミ", romaji: "mi", type: "katakana" ,group : "thanham"},
+  { char: "ム", romaji: "mu", type: "katakana" ,group : "thanham"},
+  { char: "メ", romaji: "me", type: "katakana" ,group : "thanham"},
+  { char: "モ", romaji: "mo", type: "katakana" ,group : "thanham"},
+  { char: "ヤ", romaji: "ya", type: "katakana" ,group : "thanham"},
+  { char: "ユ", romaji: "yu", type: "katakana" ,group : "thanham"},
+  { char: "ヨ", romaji: "yo", type: "katakana" ,group : "thanham"},
+  { char: "ラ", romaji: "ra", type: "katakana" ,group : "thanham"},
+  { char: "リ", romaji: "ri", type: "katakana" ,group : "thanham"},
+  { char: "ル", romaji: "ru", type: "katakana" ,group : "thanham"},
+  { char: "レ", romaji: "re", type: "katakana" ,group : "thanham"},
+  { char: "ロ", romaji: "ro", type: "katakana" ,group : "thanham"},
+  { char: "ワ", romaji: "wa", type: "katakana" ,group : "thanham"},
+  { char: "ヲ", romaji: "wo", type: "katakana" ,group : "thanham"},
+  { char: "ン", romaji: "n", type: "katakana" ,group : "thanham"},
   { char: "ガ", romaji: "ga", type: "katakana" ,group : "bienam"},
   { char: "ギ", romaji: "gi", type: "katakana" ,group : "bienam"},
   { char: "グ", romaji: "gu", type: "katakana" ,group : "bienam"},
@@ -635,13 +635,13 @@ const quizData = [
 const typeGroups = {
   hiragana: [
     { id: "all", label: "Tất cả" },
-    { id: "nguyenam", label: "Nguyên âm" },
+    { id: "thanham", label: "Thanh âm" },
     { id: "bienam", label: "Biến âm" },
     { id: "aoam", label: "Ảo âm" }
   ],
   katakana: [
     { id: "all", label: "Tất cả" },
-    { id: "nguyenam", label: "Nguyên âm" },
+    { id: "thanham", label: "Thanh âm" },
     { id: "bienam", label: "Biến âm" },
     { id: "aoam", label: "Ảo âm" }
   ],
@@ -697,7 +697,7 @@ let timeLeft = 15;
 let userAnswers = []; // Lưu lịch sử trả lời
 let difficulty = "easy";
 let currentType = "all"; // "all" | "hiragana" | "katakana"　｜"goaisatsu"
-let currentGroup = "all"; // "all" | "nguyenam" | "bienam"
+let currentGroup = "all"; // "all" | "thanham" | "bienam"
 let questionTime = 15;   // thời gian mặc định mỗi câu (giây)
 let questionCount = 15;  // số câu mặc định
 let nextAction = null; // hành động tiếp theo sau khi đóng modal
@@ -1074,6 +1074,7 @@ function showStartScreen() {
         <button class="difficulty-btn hard" onclick="setDifficulty('hard')">8 Đáp án</button>
       </div>
       <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ Flash Card</button>
       <button class="end-btn" onclick="showAlphabet()">Xem Bảng chữ cái</button>
       <button class="end-btn" onclick="showGoaisatsu()">Xem Câu cơ bản</button>
       <button class="end-btn" onclick="showGoi()">Xem Từ vựng</button>
@@ -1224,7 +1225,7 @@ function showAlphabet(group = "all") {
   let groupButtonsHtml = `
     <div class="sub-type-buttons">
       <button class="group-btn all ${currentGroup === "all" ? "active" : ""}" onclick="showAlphabet('all')">Tất cả</button>
-      <button class="group-btn nguyenam ${currentGroup === "nguyenam" ? "active" : ""}" onclick="showAlphabet('nguyenam')">Nguyên âm</button>
+      <button class="group-btn thanham ${currentGroup === "thanham" ? "active" : ""}" onclick="showAlphabet('thanham')">Thanh âm</button>
       <button class="group-btn bienam ${currentGroup === "bienam" ? "active" : ""}" onclick="showAlphabet('bienam')">Biến âm</button>
       <button class="group-btn aoam ${currentGroup === "aoam" ? "active" : ""}" onclick="showAlphabet('aoam')">Ảo âm</button>
     </div>
@@ -1244,6 +1245,182 @@ function showAlphabet(group = "all") {
       <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showStartScreen()">Quay lại</button>
     </div>`;
+}
+
+// ===============================
+// FLASH CARD LUYỆN NHẬN CHỮ NHẬT (ẩn/hiện nút khi bắt đầu & dừng)
+// ===============================
+function flashCardMode(defaultType = "hiragana_katakana") {
+  const container = document.getElementById("quiz-container");
+  container.innerHTML = "";
+
+  // ======== Biến trạng thái ========
+  let currentType = defaultType;
+  let currentGroup = "all";
+  let showRomaji = true;
+  let list = [];
+  let index = 0;
+  let timer = null;
+  let interval = 2000;
+
+  // ======== Giao diện ========
+  container.innerHTML = `
+    <div class="fade-in">
+      <h2>💡 Flash Card luyện chữ Nhật</h2>
+
+      <div id="optionSection">
+        <!-- Chọn loại -->
+        <div class="sub-type-buttons" style="margin-bottom:10px;">
+          <button class="type-btn all active" data-type="hiragana_katakana">Cả hai</button>
+          <button class="type-btn hiragana" data-type="hiragana">Hiragana</button>
+          <button class="type-btn katakana" data-type="katakana">Katakana</button>
+        </div>
+
+        <!-- Chọn nhóm -->
+        <div class="sub-type-buttons">
+          <button class="group-btn all active" data-group="all">Tất cả</button>
+          <button class="group-btn thanham" data-group="thanham">Thanh âm</button>
+          <button class="group-btn bienam" data-group="bienam">Biến âm</button>
+          <button class="group-btn aoam" data-group="aoam">Ảo âm</button>
+        </div>
+
+        <!-- Hiện romaji -->
+        <div style="margin-top:8px;">
+          <label><input type="checkbox" id="toggleRomaji" checked> Hiện Romaji</label>
+        </div>
+
+        <!-- Tốc độ -->
+        <div style="margin:10px 0;">
+          <label>⏱ Thời gian mỗi thẻ (ms): </label>
+          <input id="flashInterval" type="number" value="${interval}" min="500" step="500"
+                 style="width:100px;text-align:center;border-radius:6px;padding:4px;">
+        </div>
+      </div>
+
+      <!-- Nút điều khiển -->
+      <div class="result-buttons" id="controlSection">
+        <button id="startFlash" class="start-btn">▶ Bắt đầu</button>
+        <button id="stopFlash" class="end-btn" disabled style="display:none;">⏸ Dừng</button>
+        <button id="backFlash" class="end-btn">↩ Quay lại</button>
+      </div>
+
+      <!-- Hiển thị chữ -->
+      <div id="flashChar" class="char fade-in" style="font-size:120px;margin-top:25px;"></div>
+      <p id="flashRomaji" style="font-size:26px;color:#1565c0;margin-top:10px;"></p>
+      <p id="flashCounter" style="font-size:18px;color:#555;margin-top:10px;"></p>
+    </div>
+  `;
+
+  // ======== Lấy phần tử ========
+  const flashChar = document.getElementById("flashChar");
+  const flashRomaji = document.getElementById("flashRomaji");
+  const flashCounter = document.getElementById("flashCounter");
+  const startBtn = document.getElementById("startFlash");
+  const stopBtn = document.getElementById("stopFlash");
+  const backBtn = document.getElementById("backFlash");
+  const timeInput = document.getElementById("flashInterval");
+  const toggleRomaji = document.getElementById("toggleRomaji");
+  const groupBtns = container.querySelectorAll(".group-btn");
+  const typeBtns = container.querySelectorAll(".type-btn");
+  const optionSection = document.getElementById("optionSection");
+
+  // ======== Hiển thị từng ký tự ========
+  function showNext() {
+    if (index >= list.length) {
+      clearInterval(timer);
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+      stopBtn.style.display = "none";
+      optionSection.style.display = "block";
+      backBtn.style.display = "inline-block";
+      startBtn.style.display = "inline-block";
+      flashChar.textContent = "🎉";
+      flashRomaji.textContent = "おめでとうございます。";
+      flashCounter.textContent = "";
+      return;
+    }
+
+    const card = list[index];
+    flashChar.textContent = card.char;
+    flashRomaji.textContent = showRomaji ? card.romaji : "";
+    flashCounter.textContent = `Thẻ ${index + 1} / ${list.length}`;
+
+    // hiệu ứng
+    flashChar.classList.remove("fade-in");
+    void flashChar.offsetWidth;
+    flashChar.classList.add("fade-in");
+
+    index++;
+  }
+
+  // ======== Bắt đầu ========
+  startBtn.onclick = () => {
+    interval = parseInt(timeInput.value) || 2000;
+    index = 0;
+
+    // ẩn các phần khác, chỉ hiển thị nút dừng
+    optionSection.style.display = "none";
+    startBtn.style.display = "none";
+    backBtn.style.display = "none";
+    stopBtn.style.display = "inline-block";
+    stopBtn.disabled = false;
+
+    // lọc danh sách
+    list = quizData.filter(q => {
+      const matchType = (currentType === "hiragana_katakana")
+        ? (q.type === "hiragana" || q.type === "katakana")
+        : q.type === currentType;
+      const matchGroup = (currentGroup === "all") ? true : q.group === currentGroup;
+      return matchType && matchGroup;
+    });
+
+    list = list.sort(() => Math.random() - 0.5);
+    showNext();
+    timer = setInterval(showNext, interval);
+  };
+
+  // ======== Dừng ========
+  stopBtn.onclick = () => {
+    clearInterval(timer);
+    flashChar.textContent = "";
+    flashRomaji.textContent = "";
+    flashCounter.textContent = "";
+    stopBtn.style.display = "none";
+    startBtn.style.display = "inline-block";
+    backBtn.style.display = "inline-block";
+    optionSection.style.display = "block";
+  };
+
+  // ======== Quay lại ========
+  backBtn.onclick = () => {
+    clearInterval(timer);
+    showStartScreen();
+  };
+
+  // ======== Đổi nhóm ========
+  groupBtns.forEach(btn => {
+    btn.onclick = () => {
+      if (stopBtn.style.display === "inline-block") return; // đang chạy thì không cho chọn
+      groupBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentGroup = btn.dataset.group;
+    };
+  });
+
+  // ======== Đổi loại chữ ========
+  typeBtns.forEach(btn => {
+    btn.onclick = () => {
+      if (stopBtn.style.display === "inline-block") return; // đang chạy thì không cho chọn
+      typeBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentType = btn.dataset.type;
+    };
+  });
+
+  // ======== Bật / tắt romaji ========
+  toggleRomaji.onchange = () => {
+    showRomaji = toggleRomaji.checked;
+  };
 }
 
 
@@ -1507,6 +1684,7 @@ document.getElementById("quiz-container").innerHTML = `
         <button class="difficulty-btn hard" onclick="setDifficulty('hard')">8 Đáp án</button>
       </div>
   <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+  <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ Flash Card</button>
   <button class="end-btn" onclick="showAlphabet()">Xem Bảng chữ cái</button>
   <button class="end-btn" onclick="showGoaisatsu()">Xem Câu cơ bản</button>
   <button class="end-btn" onclick="showGoi()">Xem Từ vựng</button>
