@@ -1488,7 +1488,7 @@ function showGoaisatsu(group = "all") {
         <tbody>${rows}</tbody>
       </table>
       <br/>
-      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showStartScreen()">Quay lại</button>
     </div>
   `;
@@ -1555,7 +1555,7 @@ function showGoi(group = "all") {
         <tbody>${rows}</tbody>
       </table>
       <br/>
-      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showStartScreen()">Quay lại</button>
     </div>
   `;
@@ -1683,7 +1683,7 @@ document.getElementById("quiz-container").innerHTML = `
         <button class="difficulty-btn medium" onclick="setDifficulty('medium')">6 Đáp án</button>
         <button class="difficulty-btn hard" onclick="setDifficulty('hard')">8 Đáp án</button>
       </div>
-  <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+  <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
   <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ Flash Card</button>
   <button class="end-btn" onclick="showAlphabet()">Xem Bảng chữ cái</button>
   <button class="end-btn" onclick="showGoaisatsu()">Xem Câu cơ bản</button>
