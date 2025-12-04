@@ -319,10 +319,10 @@ const quizData = [
 
   // ==== Nhóm: Giới thiệu bản thân ====
   { char: "はじめまして", romaji: "Rất vui khi được gặp bạn", type: "goaisatsu", group: "tugioithieu" },
-  { char: "わたしは [_] とまうします。", romaji: "Tôi tên là ...", type: "goaisatsu", group: "tugioithieu" },
-  { char: "[_]さいです。", romaji: "Tôi ... tuổi", type: "goaisatsu", group: "tugioithieu" },
-  { char: "[_]からきました。", romaji: "Tôi đến từ ...", type: "goaisatsu", group: "tugioithieu" },
-  { char: "[_]にすんでいます。", romaji: "Tôi đang sống ở ...", type: "goaisatsu", group: "tugioithieu" },
+  { char: "わたしは ~ とまうします。", romaji: "Tôi tên là ...", type: "goaisatsu", group: "tugioithieu" },
+  { char: "~さいです。", romaji: "Tôi ... tuổi", type: "goaisatsu", group: "tugioithieu" },
+  { char: "~からきました。", romaji: "Tôi đến từ ...", type: "goaisatsu", group: "tugioithieu" },
+  { char: "~にすんでいます。", romaji: "Tôi đang sống ở ...", type: "goaisatsu", group: "tugioithieu" },
   { char: "KAIZENがっこうのがくせいます。", romaji: "Tôi là học viên của trường KAIZEN", type: "goaisatsu", group: "tugioithieu" },
   { char: "どうぞよろしくおねがいします。", romaji: "Rất vui được biết bạn và xin được giúp đỡ", type: "goaisatsu", group: "tugioithieu" },
 
@@ -593,43 +593,43 @@ const quizData = [
   { char: "きんようび（金曜日）", romaji: "Thứ sáu", type: "goi", group: "thutrongtuan" },
   { char: "どようび（土曜日）", romaji: "Thứ bảy", type: "goi", group: "thutrongtuan" },
   //Bài nghe 1
-  { char: "わたし", romaji: "Tôi", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "あなた", romaji: "Bạn", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "あのひと", romaji: "Người kia", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "あのかた", romaji: "Vị kia (lịch sự)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "けいしょう", romaji: "Kính xưng, cách gọi tôn kính", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "さん", romaji: "Anh / chị / ông / bà (hậu tố)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "ちゃん", romaji: "Cách gọi thân mật (bé / bạn thân)", type: "goi", group: ["gol1_3","giadinh_xungho"] },
-  { char: "せんせい", romaji: "Thầy / cô", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "きょうし", romaji: "Giáo viên", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "がくせい", romaji: "Học sinh, sinh viên", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "かいしゃいん", romaji: "Nhân viên công ty", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "ぎんこういん", romaji: "Nhân viên ngân hàng", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "いしゃ", romaji: "Bác sĩ", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "けんきゅうしゃ", romaji: "Nhà nghiên cứu", type: "goi", group: ["gol1_3","nghenghiep"] },
-  { char: "だいがく", romaji: "Đại học", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "びょういん", romaji: "Bệnh viện", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "だれ", romaji: "Ai", type: "goi", group: ["gol1_3","hoidapngan" ]},
-  { char: "どなた", romaji: "Vị nào (lịch sự của 誰)", type: "goi", group: ["gol1_3","hoidapngan" ] },
-  { char: "なんさい", romaji: "Mấy tuổi", type: "goi", group: ["gol1_3","hoidapngan" ] },
-  { char: "おいくつ", romaji: "Bao nhiêu tuổi (lịch sự)", type: "goi", group: ["gol1_3","hoidapngan" ] },
-  { char: "アメリカ", romaji: "Mỹ", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "イギリス", romaji: "Anh (UK)", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "インド", romaji: "Ấn Độ", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "インドネシア", romaji: "Indonesia", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "かんこく", romaji: "Hàn Quốc", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "タイ", romaji: "Thái Lan", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "ちゅうごく", romaji: "Trung Quốc", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "ドイツ", romaji: "Đức", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "にほん", romaji: "Nhật Bản", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "ブラジル", romaji: "Brazil", type: "goi", group: ["gol1_3","quocgia"] },
-  { char: "アイエムシー", romaji: "Công ty IMC", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "パワーでんき", romaji: "Công ty điện Power", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "ブラジルエアー", romaji: "Hãng hàng không Brazil", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "エーケーシー", romaji: "Công ty AKC", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "こうべびょういん", romaji: "Bệnh viện Kobe", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "さくらだいがく", romaji: "Đại học Sakura", type: "goi", group: ["gol1_3","diadiem"] },
-  { char: "ふじだいがく", romaji: "Đại học Fuji", type: "goi", group: ["gol1_3","diadiem"] }
+  { char: "わたし", romaji: "Tôi", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "あなた", romaji: "Bạn", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "あのひと", romaji: "Người kia", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "あのかた", romaji: "Vị kia (lịch sự)", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "~さん", romaji: "Ông, bà, anh, chị", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "~ちゃん", romaji: "Cách gọi thân mật (bé, bạn thân)", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "~じん", romaji: "Người nước ~", type: "goi", group: ["dai_1_ka","giadinh_xungho"] },
+  { char: "せんせい", romaji: "Thầy cô", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "きょうし", romaji: "Giáo viên", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "がくせい", romaji: "Học sinh, sinh viên", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "かいしゃいん", romaji: "Nhân viên công ty", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "ぎんこういん", romaji: "Nhân viên ngân hàng", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "いしゃ", romaji: "Bác sĩ", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "けんきゅうしゃ", romaji: "Nhà nghiên cứu", type: "goi", group: ["dai_1_ka","nghenghiep"] },
+  { char: "だいがく", romaji: "Đại học", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "びょういん", romaji: "Bệnh viện", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "だれ", romaji: "Ai", type: "goi", group: ["dai_1_ka","hoidapngan" ]},
+  { char: "どなた", romaji: "Vị nào (lịch sự của 誰)", type: "goi", group: ["dai_1_ka","hoidapngan" ] },
+  { char: "なんさい", romaji: "Mấy tuổi", type: "goi", group: ["dai_1_ka","hoidapngan" ] },
+  { char: "おいくつ", romaji: "Bao nhiêu tuổi (lịch sự)", type: "goi", group: ["dai_1_ka","hoidapngan" ] },
+  { char: "アメリカ", romaji: "Mỹ", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "イギリス", romaji: "Anh", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "インド", romaji: "Ấn Độ", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "インドネシア", romaji: "Indonesia", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "かんこく", romaji: "Hàn Quốc", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "タイ", romaji: "Thái Lan", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "ちゅうごく", romaji: "Trung Quốc", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "ドイツ", romaji: "Đức", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "にほん", romaji: "Nhật Bản", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "ブラジル", romaji: "Brazil", type: "goi", group: ["dai_1_ka","quocgia"] },
+  { char: "アイエムシー", romaji: "Công ty IMC", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "パワーでんき", romaji: "Công ty điện Power", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "ブラジルエアー", romaji: "Hãng hàng không Brazil", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "エケシー", romaji: "Công ty AKC", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "こうべびょういん", romaji: "Bệnh viện Kobe", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "さくらだいがく", romaji: "Đại học Sakura", type: "goi", group: ["dai_1_ka","diadiem"] },
+  { char: "ふじだいがく", romaji: "Đại học Fuji", type: "goi", group: ["dai_1_ka","diadiem"] }
 ];
 
 const typeGroups = {
@@ -648,23 +648,23 @@ const typeGroups = {
   goaisatsu: [
     { id: "all", label: "Tất cả" },
     { id: "chaohoi", label: "Chào hỏi" },
-    { id: "camonxloi", label: "Cảm ơn / Xin lỗi" },
+    { id: "camonxloi", label: "Cảm ơn, Xin lỗi" },
     { id: "anuong", label: "Ăn uống" },
-    { id: "dive", label: "Đi / Về" },
+    { id: "dive", label: "Đi, Về" },
     { id: "lop", label: "Trong lớp học" },
-    { id: "hoidap", label: "Hỏi – Đáp" },
+    { id: "hoidap", label: "Hỏi và Đáp" },
     { id: "hoithoai", label: "Hội thoại hàng ngày" },
     { id: "tugioithieu", label: "Tự giới thiệu" },
-    { id: "chucmung", label: "Chúc mừng / Khích lệ" },
+    { id: "chucmung", label: "Chúc mừng, khích lệ" },
     { id: "camxuc", label: "Cảm xúc" },
     { id: "taisya", label: "Trong công ty" },
-    { id: "baito", label: "Cửa hàng / Làm thêm" },
+    { id: "baito", label: "Cửa hàng, Làm thêm" },
     { id: "eigyou", label: "Gặp khách hàng" },
-    { id: "ryouri", label: "Nhà hàng / Ăn uống" },
-    { id: "densha", label: "Giao thông / Công cộng" },
-    { id: "byouki", label: "Khi ốm / Bệnh viện" },
-    { id: "kazoku", label: "Gia đình / Bạn bè" },
-    { id: "season", label: "Theo mùa / Lễ hội" },
+    { id: "ryouri", label: "Nhà hàng, Ăn uống" },
+    { id: "densha", label: "Giao thông, Công cộng" },
+    { id: "byouki", label: "Khi ốm, Bệnh viện" },
+    { id: "kazoku", label: "Gia đình, Bạn bè" },
+    { id: "season", label: "Theo mùa, Lễ hội" },
   ],
   goi: [
     { id: "all", label: "Tất cả" },
@@ -683,7 +683,7 @@ const typeGroups = {
     { id: "quocgia", label: "Quốc gia" },
     { id: "hoidapngan", label: "Hỏi đáp ngắn" },
     { id: "thutrongtuan", label: "Thứ trong tuần" },
-    { id: "gol1_3", label: "Bài nghe 1" },
+    { id: "dai_1_ka", label: "Bài 1" },
   ]
 };
 
@@ -1039,7 +1039,7 @@ function showStartScreen() {
   const container = document.getElementById("quiz-container");
   container.innerHTML = `
     <div class="fade-in">
-      <h2>Chào mừng đến với Quiz Cơ Bản Tiếng Nhật</h2>
+      <h2>Chào mừng đến với Tiếng Nhật Cơ Bản</h2>
       <p>Chọn thời gian mỗi câu:</p>
       <div class="time-buttons">
         <button class="time-btn t3" onclick="setTime(3)">3s</button>
@@ -1073,8 +1073,9 @@ function showStartScreen() {
         <button class="difficulty-btn medium" onclick="setDifficulty('medium')">6 Đáp án</button>
         <button class="difficulty-btn hard" onclick="setDifficulty('hard')">8 Đáp án</button>
       </div>
-      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
-      <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ Flash Card</button>
+      <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
+      <button class="start-btn" style="background-color: #ff9100;" onclick="initFlashcardStudy()">🎴 Học bằng thẻ ghi nhớ</button>
+      <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ lật thẻ nhanh</button>
       <button class="end-btn" onclick="showAlphabet()">Xem Bảng chữ cái</button>
       <button class="end-btn" onclick="showGoaisatsu()">Xem Câu cơ bản</button>
       <button class="end-btn" onclick="showGoi()">Xem Từ vựng</button>
@@ -1242,13 +1243,13 @@ function showAlphabet(group = "all") {
         <tbody>${rows}</tbody>
       </table>
       <br/>
-      <button class="start-btn" onclick="startQuiz()">Bắt đầu Quiz</button>
+      <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
       <button class="end-btn" onclick="showStartScreen()">Quay lại</button>
     </div>`;
 }
 
 // ===============================
-// FLASH CARD LUYỆN NHẬN CHỮ NHẬT (ẩn/hiện nút khi bắt đầu & dừng)
+// lật thẻ nhanh LUYỆN NHẬN CHỮ NHẬT (ẩn/hiện nút khi bắt đầu & dừng)
 // ===============================
 function flashCardMode(defaultType = "hiragana_katakana") {
   const container = document.getElementById("quiz-container");
@@ -1266,7 +1267,7 @@ function flashCardMode(defaultType = "hiragana_katakana") {
   // ======== Giao diện ========
   container.innerHTML = `
     <div class="fade-in">
-      <h2>💡 Flash Card luyện chữ Nhật</h2>
+      <h2>💡 Lật thẻ nhanh luyện chữ Nhật</h2>
 
       <div id="optionSection">
         <!-- Chọn loại -->
@@ -1649,7 +1650,7 @@ function setCount(num) {
 
 // Giao diện ban đầu
 document.getElementById("quiz-container").innerHTML = `
-  <h2>Chào mừng đến với Quiz Cơ Bản Tiếng Nhật</h2>
+  <h2>Chào mừng đến với Tiếng Nhật Cơ Bản</h2>
   <p>Chọn thời gian mỗi câu:</p>
   <div class="time-buttons">
     <button class="time-btn t3" onclick="setTime(3)">3s</button>
@@ -1684,8 +1685,149 @@ document.getElementById("quiz-container").innerHTML = `
         <button class="difficulty-btn hard" onclick="setDifficulty('hard')">8 Đáp án</button>
       </div>
   <button class="start-btn" onclick="startQuiz()">📚 Bắt đầu Quiz</button>
-  <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ Flash Card</button>
+  <button class="start-btn" style="background-color: #ff9100;" onclick="initFlashcardStudy()">🎴 Học bằng thẻ ghi nhớ</button>
+  <button class="start-btn" onclick="flashCardMode('hiragana_katakana')">💡 Chế độ lật thẻ nhanh</button>
   <button class="end-btn" onclick="showAlphabet()">Xem Bảng chữ cái</button>
   <button class="end-btn" onclick="showGoaisatsu()">Xem Câu cơ bản</button>
   <button class="end-btn" onclick="showGoi()">Xem Từ vựng</button>
 `
+
+// ===============================
+// CHẾ ĐỘ HỌC FLASHCARD (Lật 2 mặt)
+// ===============================
+
+let flashcardList = [];
+let currentCardIndex = 0;
+let isCardFlipped = false;
+
+// 1. Màn hình cài đặt Flashcard
+function initFlashcardStudy() {
+  const container = document.getElementById("quiz-container");
+  container.innerHTML = `
+    <div class="fade-in">
+      <h2>🎴 Học bằng thẻ ghi nhớ</h2>
+      <p>Chọn nội dung muốn học:</p>
+      
+      <p>Loại từ:</p>
+      <div class="type-buttons">
+        <button class="type-btn all active" onclick="setType('all')">Tất cả</button>
+        <button class="type-btn hiragana" onclick="setType('hiragana')">Hiragana</button>
+        <button class="type-btn katakana" onclick="setType('katakana')">Katakana</button>
+        <button class="type-btn goaisatsu" onclick="setType('goaisatsu')">Câu cơ bản</button>
+        <button class="type-btn goi" onclick="setType('goi')">Từ vựng</button>
+      </div>
+
+      <p id="group-label" style="display:none;">Chọn nhóm:</p>
+      <div id="group-buttons" class="group-buttons" style="display:none;"></div>
+
+      <br>
+      <button class="start-btn" onclick="startFlashcardSession()">▶ Bắt đầu học</button>
+      <button class="end-btn" onclick="showStartScreen()">Quay lại</button>
+    </div>
+  `;
+  // Reset lựa chọn mặc định
+  currentType = "all";
+  currentGroup = "all";
+  // Gọi lại hàm render nút Group để ẩn/hiện đúng logic (hàm này đã có trong code cũ của bạn)
+  renderMainGroupButtons('all'); 
+}
+
+// 2. Bắt đầu phiên học
+function startFlashcardSession() {
+  // Lọc dữ liệu theo Type và Group người dùng chọn
+  flashcardList = quizData.filter(q => {
+    const matchType =
+      currentType === "all" ||
+      (currentType === "hiragana_katakana" // Logic gộp Hira/Kata nếu cần
+        ? q.type === "hiragana" || q.type === "katakana"
+        : q.type === currentType);
+
+    const matchGroup =
+      currentGroup === "all" ||
+      (Array.isArray(q.group)
+        ? q.group.includes(currentGroup)
+        : q.group === currentGroup);
+
+    return matchType && matchGroup;
+  });
+
+  if (flashcardList.length === 0) {
+    showModal("Không tìm thấy từ vựng nào trong nhóm này!");
+    return;
+  }
+
+  // Shuffle (trộn ngẫu nhiên) danh sách để học không bị nhàm chán
+  flashcardList = shuffle(flashcardList);
+  currentCardIndex = 0;
+  isCardFlipped = false;
+  
+  renderFlashcard();
+}
+
+// 3. Hiển thị thẻ (Render)
+function renderFlashcard() {
+  const container = document.getElementById("quiz-container");
+  const item = flashcardList[currentCardIndex];
+  
+  // Xử lý highlight nếu là từ vựng (hàm applyHighlights đã có trong code cũ)
+  const displayChar = (item.type === 'goi' && item.highlights) 
+                      ? applyHighlights(item.char, item.highlights) 
+                      : item.char;
+
+  container.innerHTML = `
+    <div class="fade-in">
+      <h3>Thẻ ${currentCardIndex + 1} / ${flashcardList.length}</h3>
+      
+      <div class="flashcard-scene" onclick="flipCard()">
+        <div class="flashcard-inner" id="flashcard-inner">
+          
+          <div class="flashcard-face flashcard-front">
+            <div class="char-text">${displayChar}</div>
+            <div class="flashcard-hint">👆 Chạm để xem nghĩa</div>
+            <button class="sound-btn" style="margin-top:10px;" onclick="event.stopPropagation(); playJapanese('${item.char}')">🔊</button>
+          </div>
+
+          <div class="flashcard-face flashcard-back">
+            <div class="meaning-text">${item.romaji}</div>
+            <div class="flashcard-hint" style="color:rgba(255,255,255,0.8)">👆 Chạm để quay lại</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flashcard-controls">
+        <button class="nav-btn" onclick="prevCard()">❮</button>
+        <button class="nav-btn" onclick="nextCard()">❯</button>
+      </div>
+
+      <button class="end-btn" style="margin-top:30px" onclick="initFlashcardStudy()">Kết thúc</button>
+    </div>
+  `;
+}
+
+// Hàm lật thẻ (thêm/bỏ class CSS)
+function flipCard() {
+  const card = document.getElementById("flashcard-inner");
+  card.classList.toggle("is-flipped");
+}
+
+// Chuyển thẻ tiếp theo
+function nextCard() {
+  if (currentCardIndex < flashcardList.length - 1) {
+    currentCardIndex++;
+    renderFlashcard();
+  } else {
+    // Nếu hết thẻ, quay lại đầu hoặc thông báo
+    showModal("Bạn đã học hết danh sách! Sẽ quay lại thẻ đầu tiên.");
+    currentCardIndex = 0;
+    renderFlashcard();
+  }
+}
+
+// Quay lại thẻ trước
+function prevCard() {
+  if (currentCardIndex > 0) {
+    currentCardIndex--;
+    renderFlashcard();
+  }
+}

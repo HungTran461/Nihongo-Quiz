@@ -11,21 +11,18 @@ html {
 }
 
 body {
-    /* FIX: Chuyển sang display: block (hoặc loại bỏ flex) để cho phép cuộn tự nhiên */
-    display: block; 
-    
+    display: block;
     margin: 0;
-    /* FIX: Padding trên và dưới để đảm bảo có thể cuộn và thấy rõ */
-    padding: 20px 0; 
+    padding: 20px 0;
     
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* Font mặc định cho tiếng Việt và giao diện chung */
+    font-family: 'Be Vietnam Pro', sans-serif; 
+    
     background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
     color: #334e68;
-    
-    /* Vẫn giữ min-height để nền phủ kín màn hình ngay cả khi nội dung ngắn */
-    min-height: 100vh; 
-    overflow-x: hidden; /* Chặn cuộn ngang tuyệt đối */
-    overflow-y: auto; /* Đảm bảo cuộn dọc hoạt động */
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Định nghĩa biến màu */
@@ -459,4 +456,203 @@ button.end-btn:hover { background: #486581; transform: scale(1.05); }
     transform: translate(-50%, -50%) scale(1);
     opacity: 0;
   }
+}
+
+h1, h2, h3, p, button, input, select, label {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.char {
+    /* Font riêng cho tiếng Nhật: Noto Serif JP (Mincho) */
+    font-family: 'Noto Serif JP', serif; 
+    
+    /* Tạo nét thanh đậm rõ ràng */
+    font-weight: 700; 
+    
+    color: #102a43;
+    
+    /* Căn chỉnh lại kích thước cho phù hợp với font mới */
+    font-size: 5rem; 
+    margin: 20px 0;
+    text-shadow: 2px 2px 0px #e0e0e0;
+    
+    /* Giúp ký tự tiếng Nhật đứng dáng đẹp hơn */
+    line-height: 1.2; 
+    letter-spacing: 0.05em;
+}
+
+#flashChar {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+}
+
+/* --- CẬP NHẬT BẢNG (TABLE) --- */
+.alphabet-table .char {
+    /* Trong bảng, chữ Nhật to và rõ nét */
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.2rem; /* Tăng kích thước lên một chút cho font Serif */
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Các thành phần khác (nghĩa tiếng Việt, Romaji) vẫn giữ font Body (Be Vietnam Pro) */
+.alphabet-table td {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 500;
+}
+
+/* --- CẬP NHẬT CÁC NÚT ĐÁP ÁN (OPTION) --- */
+/* Nếu đáp án là Romaji (tiếng Anh/Việt) thì dùng font Việt. 
+   Nếu sau này bạn muốn đáp án là tiếng Nhật, hãy thêm font-family tiếng Nhật vào đây */
+.option-btn {
+    font-family: 'Be Vietnam Pro', sans-serif; /* Mặc định là Romaji nên dùng font này */
+    /* ... giữ nguyên các thuộc tính khác ... */
+}
+
+/* =========================================
+   FLASHCARD STYLE (THẺ GHI NHỚ 2 MẶT)
+   ========================================= */
+
+/* Khung chứa thẻ (tạo không gian 3D) */
+.flashcard-scene {
+    width: 100%;
+    max-width: 500px;
+    height: 320px; /* Chiều cao cố định cho thẻ */
+    margin: 30px auto;
+    perspective: 1000px; /* Tạo chiều sâu 3D */
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    
+    /* QUAN TRỌNG: Đảm bảo các mặt được định vị tuyệt đối trong khung này */
+    position: relative; 
+    
+    transition: transform 0.6s; 
+    transform-style: preserve-3d; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+
+/* Class được thêm vào khi lật thẻ */
+.flashcard-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Định dạng chung cho 2 mặt */
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    /* QUAN TRỌNG: Đảm bảo cả hai mặt nằm ở cùng một vị trí 0,0 */
+    top: 0; 
+    left: 0;
+    
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* --- MẶT TRƯỚC (Tiếng Nhật) --- */
+.flashcard-front {
+    background-color: #ffffff;
+    color: #334e68;
+    border: 2px solid #e0e0e0;
+    
+    /* QUAN TRỌNG: Để định vị nút loa tuyệt đối theo khung này */
+    position: relative; 
+}
+
+/* --- MẶT SAU (Nghĩa Tiếng Việt) --- */
+.flashcard-back {
+    background-color: var(--primary); /* Màu xanh chủ đạo */
+    color: white;
+    transform: rotateY(180deg); /* Xoay sẵn 180 độ để úp vào trong */
+    border: 2px solid var(--primary);
+}
+
+.flashcard-front .char-text {
+    font-family: 'Noto Serif JP', serif;
+    
+    /* Giảm từ 5rem xuống 3.5rem để vừa vặn hơn với từ ghép/câu ngắn */
+    font-size: 3.5rem; 
+    
+    font-weight: 700;
+    margin-bottom: 25px; /* Tăng khoảng cách dưới một chút */
+    
+    /* Đảm bảo chữ dài tự xuống dòng */
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    max-width: 90%;
+    line-height: 1.2;
+}
+
+.flashcard-back .meaning-text {
+    font-family: 'Be Vietnam Pro', sans-serif; /* Font Việt hiện đại */
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.flashcard-hint {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-top: 15px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* Nút điều hướng Flashcard */
+.flashcard-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    background: white;
+    border: 2px solid #d9e2ec;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #486581;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* MỚI: Định vị nút loa nằm cố định ở góc trên bên phải */
+.flashcard-front .sound-btn {
+    position: absolute; /* Tách khỏi dòng chảy văn bản */
+    top: 15px;
+    right: 15px;
+    margin: 0 !important; /* Bỏ margin cũ */
+    
+    /* Tinh chỉnh lại nút cho gọn trong thẻ */
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    background-color: rgba(240, 244, 248, 0.6); /* Nền hơi trong suốt */
+    z-index: 5;
+}
+.flashcard-front .sound-btn:hover {
+    background-color: var(--accent);
+    color: white;
 }
